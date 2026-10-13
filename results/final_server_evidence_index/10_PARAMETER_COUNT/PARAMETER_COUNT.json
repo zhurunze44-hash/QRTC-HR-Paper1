@@ -1,0 +1,20 @@
+{
+  "base_params": 343911,
+  "gated_init_params": 343911,
+  "qrtc_full_params": 343911,
+  "gated_minus_base": 0,
+  "qrtc_minus_base": 0,
+  "qrtc_module_elements_in_base_ckpt": 7459,
+  "qrtc_module_elements_in_qrtc_ckpt": 7459,
+  "qrtc_vs_backbone_percent": 2.216958,
+  "qrtc_vs_base_percent": 0.0,
+  "historical_module_overhead_percent_approx": 3.5,
+  "historical_qrtc_module_params_from_cmpb_tsv": 11620,
+  "this_count_qrtc_named_keys_only": 7459,
+  "module_key_definition_gap": "Live count sums tensors whose names contain qrtc_. CMPB TSV used a broader QRTC-module key set (11620 including non-qrtc_ names). Do not reconcile by changing weights. +3.5% is the historical CMPB definition (11620/332291). Live qrtc_* subset is 7459/(343911-7459) ≈ 2.22%.",
+  "counting_method": "CPU torch.load state_dict numel; QRTC_ENABLE=0 still stores qrtc_* tensors",
+  "source_sha256": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+  "config_sha256": "9a6108a29a9990fbfdaa62ffdf4b33e6938c4d8884a93ab2b63b6114bb93570d",
+  "EXACT_PARAMETER_COUNT": "VERIFIED_FROM_FORMAL_CHECKPOINTS",
+  "note": "Base and full QRTC PC wBRG checkpoints have identical total tensor element counts because QRTC modules are instantiated even when disabled."
+}

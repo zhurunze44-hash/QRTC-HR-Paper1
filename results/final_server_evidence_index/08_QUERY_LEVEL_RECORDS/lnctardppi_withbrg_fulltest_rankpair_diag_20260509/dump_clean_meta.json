@@ -1,0 +1,34 @@
+{
+  "variant": "clean",
+  "generated_utc": "2026-05-09T02:08:36.446523+00:00",
+  "config": "/root/autodl-tmp/BioPathNet_fresh/config/knowledge_graph/biomedical/lnctardppi_clean_withbrg_formal_epoch8_fulltest_20260508.yaml",
+  "checkpoint": "/root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/lnctardppi_qrtc_hr_full_closure_20260508/clean_withbrg_formal_seed1024_epoch8/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-05-08-16-03-58-170358/model_epoch_8.pth",
+  "data_root": "/root/autodl-tmp/BioPathNet_fresh/data/lnctardppi",
+  "n_rows": 609,
+  "filtered_ranking": true,
+  "recomputed": {
+    "mr_tail": 117.79638671875,
+    "mr_head": 57.338260650634766,
+    "mr_all_mean": 87.56732177734375,
+    "mrr_tail": 0.17479737102985382,
+    "mrr_head": 0.2018551528453827,
+    "mrr_all_mean": 0.18832625448703766,
+    "hits1_tail": 0.09031198918819427,
+    "hits1_head": 0.1034482792019844,
+    "hits10_tail": 0.36288997530937195,
+    "hits10_head": 0.40722495317459106
+  },
+  "task_logged_metrics": {
+    "mr": 87.56732177734375,
+    "mrr": 0.18832625448703766,
+    "hits@1": 0.09688013046979904,
+    "hits@3": 0.2019704431295395,
+    "hits@10": 0.3850574791431427,
+    "hits@100": 0.7766830921173096,
+    "hits@20": 0.5106732249259949,
+    "hits@50": 0.6642035841941833,
+    "auroc": 0.8912946581840515,
+    "ap": 0.898949921131134
+  },
+  "output_tsv": "/root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/lnctardppi_qrtc_hr_full_closure_20260508/lnctardppi_withbrg_fulltest_rankpair_diag_20260509/clean_fulltest_filtered_rankpairs.tsv"
+}

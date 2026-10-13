@@ -1,0 +1,58 @@
+{
+  "schema": "PAPER1_LAST_CHANCE_G0_ASSET_LOCK_RECEIPT",
+  "package": "PAPER1_FEEDBACK_STATE_LAST_CHANCE_V1_20261002",
+  "gate": "G0",
+  "timestamp_utc": "2026-10-02T15:57:38Z",
+  "mode": "ZERO_TRAINING_CPU_READONLY",
+  "verdict": "G0_ASSET_IDENTITY_PASS_WITH_DOCUMENTED_GAPS",
+  "flags": {
+    "NEW_TRAINING_RUNS": 0,
+    "OPTIMIZER_STEPS": 0,
+    "GPU_USED_THIS_PASS": false,
+    "TORCH_CUDA_LOADED": false,
+    "SARA_PID_93604_TOUCHED": false,
+    "CORE_MRN_PATH_TOUCHED": false
+  },
+  "checkpoint_binding": {
+    "path": "01_G0_ASSETS/G0_CHECKPOINT_BINDING.tsv",
+    "primary_wBRG_BASE_Raw": {
+      "PC_wBRG_Base": "LIVE_SHA_MATCH_SEALED",
+      "PC_wBRG_Raw_QRTC": "LIVE_SHA_MATCH_SEALED",
+      "Lnc_wBRG_Base": "LIVE_SHA_MATCH_SEALED",
+      "Lnc_wBRG_Raw_QRTC": "LIVE_SHA_MATCH_SEALED"
+    },
+    "ablation_ref": {
+      "PC_wBRG_GATE_ONLY_memory_off": "LIVE_SHA_MATCH_SEALED"
+    }
+  },
+  "identity_live_rehash_20261002": {
+    "source_files_match": 5,
+    "config_methods_match": 3,
+    "pc_kegg_split_files_match": 4,
+    "evaluator_paths_match": 3,
+    "detail_cache": "/tmp/g0_identity_rehash.json"
+  },
+  "documented_gaps": [
+    "AUTHORITATIVE_ASSET_AUDIT=PARTIAL (May-02 woBRG live .pth, seeds 1025/1026 formal trees, Top-K formal trees, relation-usage dumps)",
+    "G0_LIVE_GPU_PROOF=DEFERRED (no formal-stack replay this pass)",
+    "G0_GPU_TIMING=DEFERRED_PLAN (see 06_BUDGET/)",
+    "QRTC_FEEDBACK_STATE_MODE unread by SOURCE_RESTORE Python — feedback-state validity not closed by G0 asset lock alone"
+  ],
+  "deliverables_written": [
+    "00_AUTHORITY/G0_AUTHORITY_LOCK.md",
+    "00_AUTHORITY/REPLAY_TOLERANCE_FREEZE.json",
+    "01_G0_ASSETS/G0_CHECKPOINT_BINDING.tsv",
+    "01_G0_ASSETS/ASSET_AUDIT.tsv",
+    "01_G0_ASSETS/REAL_FORWARD_IDENTITY.md",
+    "06_BUDGET/COMPUTE_BUDGET.json",
+    "06_BUDGET/G0_TIMING_COST_PLAN.md",
+    "06_BUDGET/PAPER1_RUNTIME_MEMORY_COST_TABLE_20260510.tsv",
+    "receipts/G0_ASSET_LOCK_RECEIPT.json"
+  ],
+  "explicit_non_claims": [
+    "No live formal-stack GPU replay",
+    "No new training / optimizer steps",
+    "No adjudication of feedback-state validity (A3)",
+    "Gates 02_SPLIT through 07_DECISION remain NOT_RUN"
+  ]
+}

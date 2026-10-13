@@ -1,0 +1,13 @@
+claim	evidence_file	sha256	evidence_level	supports_claim	limitation
+method identity RELATION_GATE_PLUS_CROSS_LAYER_RELATION_USAGE_MEMORY	02_METHOD_SOURCE/METHOD_IDENTITY_AUDIT.md	cf0919b6b12246f3b9b0772e75d2645ae73d1f90a2e8a57386545e5e7e8ab9c6	PRIMARY	YES	WORK biopathnet differs; authority is SOURCE_RESTORE
+PC KEGG wBRG seed1024 QRTC raises MRR	05_PRIMARY_RESULTS/FORMAL_RESULT_AUDIT.tsv	9326de29fa2b91c3c8dc36a30314b6a60ddc4fe697e1bc2a8d4dcf9f0c83cf0c	PRIMARY	YES	AP/AUROC slightly down; test MR worse
+LncTarD mixed	07_CROSS_DATASET_GENERALIZATION/GENERALIZATION_LEDGER.tsv		PRIMARY	YES	wBRG test MRR and Hits@1 down
+full 5-seed behavior	06_FULL_5SEEDS/FIVE_SEED_SUMMARY.json		ABSENT_AS_FORMAL	NO	no complete formal 5-seed panel; A1 rejected
+cross-dataset behavior	07_CROSS_DATASET_GENERALIZATION/GENERALIZATION_AUDIT.md		PRIMARY	PARTIAL	two datasets only; mixed
+exact replay	12_EXACT_REPLAY/EXACT_REPLAY_SUMMARY.json		PRIMARY_HISTORICAL	PARTIAL	historical log+SHA match; live GPU replay not run
+bootstrap Delta MRR CI	09_BOOTSTRAP/BOOTSTRAP_REAUDIT.json		PRIMARY	YES_QUERY_LEVEL_ONLY	not training-seed uncertainty
+parameter count ~+3.5% modules vs backbone	10_PARAMETER_COUNT/PARAMETER_COUNT.json		PRIMARY	YES_WITH_CONFOUND	Base ckpt stores same qrtc tensors
+runtime ~1.47x	11_RUNTIME/RUNTIME_EVIDENCE_AUDIT.md		FORENSIC_MICROBENCH	PARTIAL	not full-eval wall-clock
+capacity confound	10_PARAMETER_COUNT/PARAMETER_OVERHEAD_INTERPRETATION.md		PRIMARY	YES	not parameter-matched control
+LAST_CHANCE closed no investment	16_LAST_CHANCE/LAST_CHANCE_AUTHORITY_SUMMARY.md		GOVERNANCE	YES	35/35 named checklist MISSING
+A1 boundary STOP	17_A1_PROVENANCE/A1_FINAL_EVIDENCE_BOUNDARY.md		GOVERNANCE	YES	A1 != user complete 5-seeds; complete 5-seeds not found

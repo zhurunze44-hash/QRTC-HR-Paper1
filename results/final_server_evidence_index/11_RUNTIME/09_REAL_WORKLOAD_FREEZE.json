@@ -1,0 +1,28 @@
+{
+  "dataset": "<REDACTED_SERVER_PATH>",
+  "dataset_sha_entity_names": "c1113fe726f25d8ebe1cbb017461f1b2b3645d8ecb23b305e31ebcd721d9bd34",
+  "split": "valid",
+  "batch_size": 2,
+  "num_candidates": 32,
+  "seed": 1024,
+  "query_h": [
+    21911,
+    12734
+  ],
+  "query_t_pos": [
+    30917,
+    30918
+  ],
+  "query_r": [
+    13,
+    13
+  ],
+  "dtype": "float32",
+  "device": "cuda",
+  "num_node": 31410,
+  "num_relation": 14,
+  "fact_graph_num_edge": 1906848,
+  "fact_graph_construction": "mask out valid+test indices from full dataset graph",
+  "ckpt_clean": "<REDACTED_SERVER_PATH>",
+  "ckpt_qrtc": "<REDACTED_SERVER_PATH>"
+}

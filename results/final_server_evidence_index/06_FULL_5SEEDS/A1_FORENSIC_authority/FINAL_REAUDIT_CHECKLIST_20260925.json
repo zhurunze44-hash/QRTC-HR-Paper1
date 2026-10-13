@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "check": "script_a1_eval_full_test_metrics_only.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "script_extract_a1_metrics.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "script_run_a1_cell.sh",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "script_run_a1_panel_oneshot.sh",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "script_watch_train_then_resume_panel.sh",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "eval_no_chdir_source",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "watcher_waits_train_exit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "n_configs",
+      "pass": true,
+      "detail": "15"
+    },
+    {
+      "check": "train_alive",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "watcher_alive",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "all_pass": true
+}

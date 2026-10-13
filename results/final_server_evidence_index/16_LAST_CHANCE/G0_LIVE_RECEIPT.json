@@ -1,0 +1,83 @@
+{
+  "assets": {
+    "LNC_BASE": {
+      "bytes": 61948683,
+      "exists": true,
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "a29b0a0647fb8f4b5f3429fcdbf49dedbdec083fbc0a1c7ef5467dcec7707590"
+    },
+    "LNC_RAW": {
+      "bytes": 61998839,
+      "exists": true,
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "8609cdc353964e6a59a0b696e7d136676873fcdeb97a51efa386f7fe3134829f"
+    },
+    "PC_BASE": {
+      "bytes": 111116427,
+      "exists": true,
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "8a66e860f4740e9e21628c3449d006452d6386c686d3d6a227c163c99fb45b68"
+    },
+    "PC_RAW": {
+      "bytes": 111166583,
+      "exists": true,
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0"
+    }
+  },
+  "replay": {
+    "LNC": {
+      "candidates_per_side": 16844,
+      "max_mrr_diff": 0.0,
+      "max_rank_diff": 0.0,
+      "n_queries": 16,
+      "peak_mib_last": 2432.17578125,
+      "replay_pass": true,
+      "run1": {
+        "buffers_unchanged": true,
+        "ckpt_sha256": "8609cdc353964e6a59a0b696e7d136676873fcdeb97a51efa386f7fe3134829f",
+        "hits@1": 0.03125,
+        "hits@10": 0.34375,
+        "import_model_path": "<REDACTED_SERVER_PATH>",
+        "mrr": 0.10751395478245987,
+        "params_unchanged": true
+      },
+      "run2": {
+        "buffers_unchanged": true,
+        "hits@1": 0.03125,
+        "hits@10": 0.34375,
+        "mrr": 0.10751395478245987,
+        "params_unchanged": true
+      },
+      "tol_mrr": 1e-05,
+      "unique_queries": 16
+    },
+    "PC": {
+      "candidates_per_side": 31410,
+      "max_mrr_diff": 0.0,
+      "max_rank_diff": 0.0,
+      "n_queries": 16,
+      "peak_mib_last": 2809.65478515625,
+      "replay_pass": true,
+      "run1": {
+        "buffers_unchanged": true,
+        "ckpt_sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0",
+        "hits@1": 0.40625,
+        "hits@10": 0.59375,
+        "import_model_path": "<REDACTED_SERVER_PATH>",
+        "mrr": 0.48395863771072645,
+        "params_unchanged": true
+      },
+      "run2": {
+        "buffers_unchanged": true,
+        "hits@1": 0.40625,
+        "hits@10": 0.59375,
+        "mrr": 0.48395863771072645,
+        "params_unchanged": true
+      },
+      "tol_mrr": 1e-05,
+      "unique_queries": 16
+    }
+  },
+  "stage": "G0"
+}

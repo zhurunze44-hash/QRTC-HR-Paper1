@@ -1,0 +1,47 @@
+# Engineering check only: cap32 valid-only eval, tiny QRTC-HR withBRG checkpoint.
+# QRTC toggles via environment (QRTC_ENABLE=1, QRTC_FORCE_MESSAGE_PATH=0, ...).
+# Not a paper result config.
+
+output_dir: paper1_q2_sci_package_20260428/qrtc_hr_execution_contract_20260505/formal_fused_cap32_engineering_check_20260505/eval_workdir
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: yes
+    layer_norm: yes
+    dependent: yes
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 1
+  num_worker: 0
+
+train:
+  smoke_skip_valid: yes
+  num_epoch: 1
+
+metric: mrr
+
+checkpoint: /root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/qrtc_hr_full_closure_20260504/qrtc_hronly_withbrg_timing20_batch1_neg32/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-05-04-12-00-08-409419/model_epoch_1.pth

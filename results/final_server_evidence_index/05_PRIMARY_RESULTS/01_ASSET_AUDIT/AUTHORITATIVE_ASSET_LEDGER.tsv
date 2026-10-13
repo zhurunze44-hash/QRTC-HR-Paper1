@@ -1,0 +1,15 @@
+asset_id	status	eligible_for_primary	bound_to	notes
+PC_wBRG_Base_seed1024	RESOLVED_MATCH	YES	formal Clean ckpt + main TSV	H1/H10/MRR bound
+PC_wBRG_QRTC_seed1024	RESOLVED_MATCH	YES	formal QRTC ckpt sha e3fb9d65…	H1/H10/MRR bound
+PC_woBRG_Base_seed1024	RESOLVED_MATCH	YES	formal Clean	MRR 0.405033
+PC_woBRG_QRTC_seed1024	RESOLVED_MATCH_AGGREGATE_ONLY	YES_AGGREGATE	May-02 protected re-eval log	live May-02 ckpt NOT_ON_DISK; no query-level
+PC_woBRG_rankpair_May08	EXCLUDED	NO	withoutbrg_fulltest_rankpair_diag_20260508	BAD_RERUN; mean_rr mismatch vs 0.419978
+Lnc_wBRG_Base_QRTC	RESOLVED_MATCH	YES	formal closure	MRR 0.188326/0.179300
+Lnc_woBRG_Base_QRTC	RESOLVED_MATCH	YES	formal closure	MRR 0.183579/0.184451
+Seeds_1025_1026	UNRESOLVED_PROVENANCE	NO	—	Do not use as core empirical support; do not rerun
+TopK_1_2_3_all_formal	UNRESOLVED_PROVENANCE	NO	—	Omit from core argument until provenance recovered
+Relation_usage_gate_memory_dump	NOT_AVAILABLE	NO	—	No historical dump
+A1_panel	EXCLUDED	NO	A1 stop terminal	A1_RESULTS_USED_IN_MANUSCRIPT=false
+B_PC_wBRG_rankpair_bootstrap	COMPLETE	YES	statistical_evidence_20260509 + matched_rank_delta	primary query-level block
+C_Lnc_wBRG_rankpair	COMPLETE	YES_BOUNDARY	matched_rank_delta	mixed boundary
+D_Lnc_woBRG_rankpair	COMPLETE	YES_BOUNDARY	matched_rank_delta	no stable uplift

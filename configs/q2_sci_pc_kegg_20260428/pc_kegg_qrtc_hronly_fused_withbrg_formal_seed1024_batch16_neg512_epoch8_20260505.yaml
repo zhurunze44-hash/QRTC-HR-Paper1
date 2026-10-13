@@ -1,0 +1,42 @@
+# QRTC-HR fused-compatible withBRG formal train (batch16, neg512, epoch8). No batch_per_epoch, no checkpoint.
+# QRTC_ENABLE / QRTC_USE_MEMORY / QRTC_TOPK / QRTC_FORCE_MESSAGE_PATH etc. are set via shell environment at runtime — not in YAML.
+output_dir: paper1_q2_sci_package_20260428/qrtc_hr_full_closure_20260504/qrtc_hronly_fused_withbrg_formal_seed1024_batch16_neg512_epoch8_20260505
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: yes
+    layer_norm: yes
+    dependent: yes
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 16
+
+train:
+  smoke_skip_valid: yes
+  num_epoch: 8
+
+metric: mrr

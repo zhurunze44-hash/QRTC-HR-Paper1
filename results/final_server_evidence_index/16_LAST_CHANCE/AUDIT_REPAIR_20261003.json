@@ -1,0 +1,57 @@
+{
+  "utc": "2026-10-03T03:40:00Z",
+  "scope": "Independent re-audit of LAST_CHANCE zero-training line: design logic, overlay semantics, comparison correctness, mis-runs",
+  "canonical_source_modified": false,
+  "defects_fixed": [
+    {
+      "id": "R1_G2_ABS_DELTA_FREEZE",
+      "severity": "critical",
+      "status": "fixed",
+      "detail": "G2 froze g*A when abs(delta_mrr)>=0.002 even if design ΔMRR was negative (-0.0078). Protocol requires repair-direction evidence. Now requires delta_mrr_mean >= +0.002 (or net-up frac with positive mean)."
+    },
+    {
+      "id": "R2_CORRECT_GA_SCALE_OOD",
+      "severity": "critical",
+      "status": "fixed",
+      "detail": "Literal S=g*A shrinks usage by ~mean(N) (~1e3-1e5), confounding TopK reordering with precedent-attention scale OOD. correct_ga now scale-matches per-query mean-abs mass to U; unscaled kept as diagnostic-only mode."
+    },
+    {
+      "id": "R3_G1_FRAC_DROP_FALSE_SIGNAL",
+      "severity": "high",
+      "status": "fixed",
+      "detail": "G1 continued on frac_mrr_drop>=0.15 alone (rank churn). Now requires practical net |delta_mrr|."
+    },
+    {
+      "id": "R4_BOOTSTRAP_TRIPLE_NOT_GROUP",
+      "severity": "medium",
+      "status": "fixed",
+      "detail": "Bootstrap resampled triples; protocol asks shared-source groups. Now bootstraps head-entity group means."
+    },
+    {
+      "id": "R5_DECISION_DROPPED_G2",
+      "severity": "low",
+      "status": "fixed",
+      "detail": "Final write_decision always passed g2=None; G2 snapshot now included."
+    },
+    {
+      "id": "R6_ZERO_ID_FACTOR_SIDE_EFFECTS",
+      "severity": "low",
+      "status": "fixed",
+      "detail": "zero_update/identity_control previously stashed ρ and computed U≈gNA stats without needing them. Now skip factor path."
+    }
+  ],
+  "design_flaws_in_gpt_protocol_line": [
+    "Treating algebraic U=g*N*A identity as empirical discovery (already noted F7).",
+    "Prior selection used |Δ| so a harmful intervention could unlock expensive G3.",
+    "Unscaled g*A is not a clean test of removing exposure factor N.",
+    "G3 under invalid SELECTED is not evidence against the scientific hypothesis — it was a mis-run."
+  ],
+  "not_bugs": [
+    "Rank formula matches biopathnet task.py filtered ranking",
+    "DESIGN_CHECK abs_index = valid.txt line; mapped via set_valid_line_indices",
+    "Checkpoint SHA bindings / SOURCE_RESTORE import root",
+    "TEST not used for selection",
+    "No training/optimizer/backward"
+  ],
+  "prior_invalid_outputs": "receipts/_QUARANTINE_PRE_REPAIR_20261003/"
+}

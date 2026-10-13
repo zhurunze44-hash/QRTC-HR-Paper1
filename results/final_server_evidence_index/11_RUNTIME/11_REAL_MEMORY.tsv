@@ -1,0 +1,5 @@
+workload	mode	peak_allocated_MB	peak_reserved_MB	allocated_MB	reserved_MB
+real_pc_kegg	A	525.53515625	762.0	60.97998046875	762.0
+real_pc_kegg	B	526.873046875	764.0	62.31787109375	764.0
+real_pc_kegg	C	528.2109375	764.0	63.65576171875	764.0
+real_pc_kegg	D	529.55078125	874.0	63.65576171875	874.0

@@ -1,0 +1,50 @@
+{
+  "schema": "IMPLEMENTATION_IDENTITY",
+  "utc": "2026-09-15T06:08:00Z",
+  "authority_root": "<REDACTED_SERVER_PATH>",
+  "work_copy_note": "QRTC_HR_WORK_20260908/biopathnet differs (OPT-1/2 patches); Table binding uses SOURCE_RESTORE",
+  "patch_marker": "QRTC_MINIMAL_PATCH_V6",
+  "model_class": "model.NBFNet / NeuralBellmanFordNetwork",
+  "layer_class_formal": "layer.GeneralizedRelationalConv",
+  "edge_gate": false,
+  "message_func": "distmult",
+  "aggregate_func": "pna",
+  "formal_path": "fused_message_and_aggregate_rspmm",
+  "relation_gate_enters_message_and_aggregate": true,
+  "qrtc_usage_mlp_active_on_formal_fused": false,
+  "cand_readout_active": false,
+  "force_message_path": "0",
+  "topk_formal": 2,
+  "topk_code_getenv_default": 4,
+  "memory_start_layer_formal": 0,
+  "routing": {
+    "relation_gating": true,
+    "cross_layer_precedent_state": true,
+    "hop_router_evidence_or_m1": false,
+    "final_readout": "last_layer_hidden_concat_query_mlp"
+  },
+  "gate_formula": "G = sigmoid(gate_mlp(cat(q_rel, relation_table[r], precedent_memory))); relation_bf *= G",
+  "memory_formula": "m = init_memory if no U_prev else sum_i softmax(precedent_mlp([q,e_ri,u_i])) * e_ri over TopK(U_prev,k=2)",
+  "topk_selects": "top-2 relation IDs by prior-layer detached mean-abs DistMult message strength",
+  "score_formation": "score = mlp(gather(cat(h_L, query), t_index))",
+  "source_file_sha256": {
+    "model.py": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+    "layer.py": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657",
+    "qrtc_common.py": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f",
+    "task.py": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc",
+    "util.py": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7"
+  },
+  "table_binding_refs": [
+    "03_PAPER1_RESULT_PROVENANCE_AUDIT/PAPER1_RESULT_PROVENANCE_AUDIT.json",
+    "config/q2_sci_pc_kegg_20260428/pc_kegg_qrtc_hronly_fused_withbrg_formal_seed1024_batch16_neg512_epoch8_20260505.yaml"
+  ],
+  "answers": {
+    "relation_gate_formula": "sigmoid(gate_mlp([q||r||c])) then relation_bf *= G inside message_and_aggregate",
+    "memory_state_formula": "TopK-2 usage-weighted sum of relation embeddings (or qrtc_init_memory)",
+    "topk2_selects": "prior-layer relation usages (not hops/candidates)",
+    "routing": "relation + cross-layer state; no hop mixer on formal YAML",
+    "final_score": "mlp on last-layer node feature concat query at candidates",
+    "qrtc_usage_mlp_active": false,
+    "relation_gate_in_message_and_aggregate": true
+  }
+}

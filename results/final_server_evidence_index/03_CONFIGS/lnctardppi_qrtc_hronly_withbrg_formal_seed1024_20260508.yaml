@@ -1,0 +1,44 @@
+# LncTarD-PPI — QRTC-HR only withBRG formal train (epoch 8, seed 1024) — 2026-05-08
+# Hyperparams aligned with Clean withBRG formal (not PC neg512). QRTC via env only.
+# No checkpoint, no batch_per_epoch, no cap/subset/debug.
+output_dir: paper1_q2_sci_package_20260428/lnctardppi_qrtc_hr_full_closure_20260508/qrtc_hronly_withbrg_formal_seed1024_epoch8
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/lnctardppi
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: yes
+    layer_norm: yes
+    dependent: yes
+    symmetric: no
+  criterion: bce
+  num_negative: 32
+  strict_negative: yes
+  adversarial_temperature: 0.5
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 32
+
+train:
+  num_epoch: 8
+  smoke_skip_valid: yes
+
+metric: mrr

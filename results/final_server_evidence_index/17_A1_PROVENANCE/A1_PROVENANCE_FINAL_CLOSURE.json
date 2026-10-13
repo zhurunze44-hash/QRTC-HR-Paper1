@@ -1,0 +1,88 @@
+{
+  "utc": "2026-10-02T09:40:43Z",
+  "A1_PROVENANCE_FINAL_TERMINAL": "STOP__A1_ORIGINAL_PANEL_PROVENANCE_INSUFFICIENT",
+  "RAW1024_CONTRACT_ADMISSIBILITY": "HOLD__RUNTIME_SOURCE_IMPORT_PROVENANCE_INSUFFICIENT",
+  "RAW1024_NUMERICAL_RESULT": "ESTABLISHED__MRR_0.1946338713169098",
+  "RAW1024_FRESH_LINEAGE": "ESTABLISHED",
+  "RAW1024_WITHIN_RUN_LATE_TRAINING_DIVERGENCE": "ESTABLISHED",
+  "COMPLETED_SIX_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED__NO_CELL_FULLY_BOUND",
+  "SEED_CONTRACT": "PARTIALLY_BOUND",
+  "PRE_POST_PATCH_PANEL_COMPATIBILITY": "UNRESOLVED",
+  "A1_SCIENTIFIC_INTERPRETABILITY": "VALID_WITH_LIMITATIONS",
+  "BASE1026_RECOVERY_MODE": "FRESH_RESTART_FROM_EPOCH0_IF_PANEL_CONTINUES",
+  "A1_R_REQUIRED_FOR_NEW_EVIDENCE": true,
+  "A1_RESUME_AUTHORIZED": false,
+  "A1_R_AUTHORIZED": false,
+  "GPU_TOUCHED": false,
+  "TRAINING_STARTED": false,
+  "EVAL_STARTED": false,
+  "SCIENTIFIC_SOURCE_MODIFIED": false,
+  "cell_provenance": [
+    {
+      "cell": "BASE_seed1024",
+      "winning_workdir": "2026-09-25-14-00-58-001915",
+      "traceback_SOURCE_RESTORE_modules": "(none)",
+      "n_File_tracebacks": "0",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "MEDIUM_PARTIAL_launcher_plus_negative_exclusions"
+    },
+    {
+      "cell": "GATE_ONLY_seed1024",
+      "winning_workdir": "2026-09-25-21-53-35-566750",
+      "traceback_SOURCE_RESTORE_modules": "layer.py;model.py;qrtc_common.py;run.py;task.py",
+      "n_File_tracebacks": "37",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "HIGH_PARTIAL"
+    },
+    {
+      "cell": "RAW_QRTC_seed1024",
+      "winning_workdir": "2026-09-27-04-47-10-225368",
+      "traceback_SOURCE_RESTORE_modules": "layer.py;model.py;qrtc_common.py;run.py;task.py",
+      "n_File_tracebacks": "475",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "HIGH_PARTIAL"
+    },
+    {
+      "cell": "BASE_seed1025",
+      "winning_workdir": "2026-09-27-21-25-15-144502",
+      "traceback_SOURCE_RESTORE_modules": "layer.py;model.py;run.py;task.py",
+      "n_File_tracebacks": "37",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "HIGH_PARTIAL"
+    },
+    {
+      "cell": "GATE_ONLY_seed1025",
+      "winning_workdir": "2026-09-28-08-02-44-597094",
+      "traceback_SOURCE_RESTORE_modules": "layer.py;model.py;qrtc_common.py;run.py;task.py",
+      "n_File_tracebacks": "93",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "HIGH_PARTIAL"
+    },
+    {
+      "cell": "RAW_QRTC_seed1025",
+      "winning_workdir": "2026-09-29-09-52-34-101837",
+      "traceback_SOURCE_RESTORE_modules": "layer.py;model.py;qrtc_common.py;run.py;task.py",
+      "n_File_tracebacks": "93",
+      "forbidden_import_paths_in_logs": "0",
+      "quiet_winning_module_file_receipt": "False",
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": "YES",
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "confidence": "HIGH_PARTIAL"
+    }
+  ]
+}

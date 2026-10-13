@@ -1,0 +1,21 @@
+{
+  "checkpoint_path": "<REDACTED_SERVER_PATH>",
+  "checkpoint_sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0",
+  "config": "pc_kegg_qrtc_hronly_fused_withbrg_formal_epoch8_FULL_TEST_METRICS_ONLY_20260506.yaml",
+  "config_sha256": "57354f688fbd4ceda487318823e48c8c56f48aefa8981885c3ac21c3e8fe89b2",
+  "source_sha256_model_py": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+  "evaluator": "eval_test_metrics_only_20260506.py",
+  "evaluator_sha256": "368bc63bfe6f4c9eea753453ef354a80868e5e370775c5da1064e6a50ce44a2d",
+  "historical_metrics": {
+    "MRR": 0.550018,
+    "Hits@1": 0.460158,
+    "Hits@10": 0.730429,
+    "AP": 0.986643,
+    "AUROC": 0.985724,
+    "MR": 126.234
+  },
+  "historical_eval_match_published": "PASS_EXACT per REPLAY_RECEIPT.json",
+  "live_gpu_replay_this_host": "WHY_NOT_EXECUTABLE",
+  "ABS_DIFF": "0 vs published table for HISTORICAL eval log; live replay not executed this task",
+  "status": "HISTORICAL_BINDING_PASS__LIVE_REPLAY_NOT_RUN"
+}

@@ -1,0 +1,74 @@
+{
+  "audit_utc": "2026-10-02T09:25:00Z",
+  "mode": "ADVERSARIAL_READ_ONLY",
+  "gpu_touched": false,
+  "training_started": false,
+  "files_modified_outside_forensics": false,
+
+  "terminals": {
+    "A1_FULL_CHAIN_REAUDIT_TERMINAL": "HOLD__PROVENANCE_AND_PRE_POST_PATCH_COMPARABILITY_UNRESOLVED",
+    "A1_ORIGINAL_PANEL": "HOLD__PROVENANCE_AND_PRE_POST_PATCH_COMPARABILITY_UNRESOLVED",
+    "RAW1024_NUMERICAL_RESULT": "ESTABLISHED__MRR_0.1946338713169098",
+    "RAW1024_FRESH_LINEAGE": "ESTABLISHED",
+    "RAW1024_WITHIN_RUN_LATE_TRAINING_DIVERGENCE": "ESTABLISHED",
+    "RAW1024_CONTRACT_ADMISSIBILITY": "HOLD__RUNTIME_SOURCE_IMPORT_PROVENANCE_REQUIRES_FINAL_BINDING",
+    "RAW1024_ADMISSIBILITY_WITHDRAWN_PREMATURE": "ADMISSIBLE__WITH_OPERATIONAL_INCIDENTS_NOT_AFFECTING_SCIENCE",
+    "HISTORICAL_VS_A1_TRAINING_CONTRACT": "SCIENTIFICALLY_EQUIVALENT_WITH_LISTED_OPERATIONAL_DIFFERENCES",
+    "SEED_CONTRACT": "PARTIALLY_BOUND",
+    "PRE_POST_PATCH_PANEL_COMPATIBILITY": "UNRESOLVED",
+    "GATE1_RUNTIME_IMPORT": "PARTIALLY_BOUND",
+    "BASE1026_RECOVERY_MODE": "POLICY_FRESH_RESTART_IF_PANEL_CONTINUES",
+    "WITHIN_RUN_LATE_TRAINING_DIVERGENCE": "ESTABLISHED",
+    "QRTC_OPTIMIZATION_INSTABILITY_GENERALIZED": "NOT_ESTABLISHED",
+    "A1_DESIGN_VALIDITY": "VALID_WITH_LIMITATIONS",
+    "A1_RESUME_AUTHORIZED": false
+  },
+  "status_seal": "forensics/A1_AUTHORITATIVE_STATUS_AFTER_ADVERSARIAL_REAUDIT.json",
+  "gate1_evidence": "forensics/GATE1_RUNTIME_IMPORT_PROVENANCE_EVIDENCE.json",
+
+
+  "unresolved_gates_before_any_gpu": [
+    "historical_per_cell_harness_script_SHA_not_recoverable_without_git",
+    "ambient_PYTHONPATH_at_Sep2025_30_train_times_not_proven",
+    "BASE1026_resume_vs_fresh_protocol_not_predeclared",
+    "operator_choice_continue_original_A1_vs_new_protocol_after_V2"
+  ],
+
+  "raw1024": {
+    "mrr_observed_not_used_in_admissibility": 0.1946338713169098,
+    "train_attempts": 30,
+    "oom_count": 28,
+    "winning_workdir": "2026-09-27-04-47-10-225368",
+    "epoch8_sha256": "d4874222a223ba905a11adddc8293f295cef7a13a064fcd8d121eeb7100df58d",
+    "eval_error": "HIGH_CONFIDENCE_EXCLUDED",
+    "shared_dataset_storm_touch": false,
+    "load_checkpoint_in_winning_log": 0,
+    "sibling_pth_count": 0
+  },
+
+  "method_factor": {
+    "base_gate_raw_param_count_identical": true,
+    "params": 343911,
+    "tensor_keys": 115,
+    "gate_minus_base_pure_gate": false,
+    "all_six_receipts_metrics_source_cell_scoped": true
+  },
+
+  "import_path": {
+    "run_py_mechanism": "sys.path.append(dirname(dirname(__file__)))",
+    "launcher_sys_path_scrub": false,
+    "site_packages_biopathnet_now": false,
+    "oom_stacks_show_source_restore": true,
+    "historical_ambient_path": "NOT_PROVEN"
+  },
+
+  "artifacts": [
+    "forensics/FULL_CHAIN_REAUDIT_SNAPSHOT.json",
+    "forensics/A1_FULL_CHAIN_ADVERSARIAL_REAUDIT_20261002.md",
+    "forensics/A1_FULL_CHAIN_ADVERSARIAL_REAUDIT.json",
+    "forensics/A1_CELL_RUNTIME_PROVENANCE_MATRIX.csv",
+    "forensics/A1_HARNESS_VERSION_MATRIX.csv",
+    "forensics/A1_PRIOR_CLAIM_REAUDIT_TABLE.md",
+    "forensics/A1_ORIGINAL_FROZEN_CONTRACT_RECONSTRUCTED.md"
+  ]
+}

@@ -1,0 +1,15 @@
+# Never commit large freeze binaries into ordinary Git
+frozen_assets/
+frozen_assets_download/
+*.tar.zst
+*.tar.zst.part*
+*.pth
+*.pt
+*.ckpt
+__pycache__/
+*.pyc
+.env
+*.pem
+id_rsa*
+id_ed25519*
+.DS_Store

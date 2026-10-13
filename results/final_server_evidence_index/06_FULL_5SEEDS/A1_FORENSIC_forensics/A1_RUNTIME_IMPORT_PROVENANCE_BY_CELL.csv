@@ -1,0 +1,7 @@
+cell,winning_workdir,traceback_SOURCE_RESTORE_modules,n_File_tracebacks,forbidden_import_paths_in_logs,quiet_winning_module_file_receipt,launcher_exec_absolute_SOURCE_RESTORE_run_py,ACTUAL_RUNTIME_SOURCE_PROVENANCE,confidence
+BASE_seed1024,2026-09-25-14-00-58-001915,(none),0,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,MEDIUM_PARTIAL_launcher_plus_negative_exclusions
+GATE_ONLY_seed1024,2026-09-25-21-53-35-566750,layer.py;model.py;qrtc_common.py;run.py;task.py,37,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,HIGH_PARTIAL
+RAW_QRTC_seed1024,2026-09-27-04-47-10-225368,layer.py;model.py;qrtc_common.py;run.py;task.py,475,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,HIGH_PARTIAL
+BASE_seed1025,2026-09-27-21-25-15-144502,layer.py;model.py;run.py;task.py,37,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,HIGH_PARTIAL
+GATE_ONLY_seed1025,2026-09-28-08-02-44-597094,layer.py;model.py;qrtc_common.py;run.py;task.py,93,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,HIGH_PARTIAL
+RAW_QRTC_seed1025,2026-09-29-09-52-34-101837,layer.py;model.py;qrtc_common.py;run.py;task.py,93,0,False,YES,PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED,HIGH_PARTIAL

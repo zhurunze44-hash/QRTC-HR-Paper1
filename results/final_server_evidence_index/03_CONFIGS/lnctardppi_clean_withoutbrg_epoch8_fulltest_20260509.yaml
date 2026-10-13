@@ -1,0 +1,44 @@
+# LncTarD-PPI Clean withoutBRG — full test-only eval (epoch 8 ckpt) — 2026-05-09
+# Same graph/hparams as train; checkpoint from Stage 1. For eval_valid_only.py + EVAL_ONLY_SPLIT=test.
+output_dir: paper1_q2_sci_package_20260428/lnctardppi_qrtc_hr_full_closure_20260508/clean_withoutbrg_epoch8_fulltest_eval_20260509
+
+checkpoint: /root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/lnctardppi_qrtc_hr_full_closure_20260508/clean_withoutbrg_formal_seed1024_epoch8/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-05-09-16-06-40-709140/model_epoch_8.pth
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/lnctardppi
+  include_factgraph: no
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: yes
+    layer_norm: yes
+    dependent: yes
+    symmetric: no
+  criterion: bce
+  num_negative: 32
+  strict_negative: yes
+  adversarial_temperature: 0.5
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 32
+
+train:
+  num_epoch: 0
+
+metric: mrr

@@ -1,0 +1,96 @@
+{
+  "FINAL_STATUS": "PASS__QRTC_RUNTIME_ROOT_CAUSE__ALGORITHM_DOMINANT",
+  "utc_sealed": "2026-09-08T14:40:00Z",
+  "server_safety": {
+    "gpu_heavy_work_this_seal": false,
+    "training": false,
+    "huri": false,
+    "optimization_implemented": false,
+    "source_pair_kg_modified": false
+  },
+  "ratios": {
+    "R_WRAPPER": 1.001727313382504,
+    "R_QRTC": 1.4705896634025168,
+    "R_TOTAL": 1.473129832608284,
+    "BIOPATHNET_MEDIAN_MS": 138.1185384998389,
+    "QRTC_OFF_MEDIAN_MS": 138.35711249976157,
+    "QRTC_ON_MEDIAN_MS": 203.46653950036853,
+    "MESSAGE_CALL_RATIO": "both_zero_fused_path",
+    "PROPAGATION_CALL_RATIO": 1.0,
+    "MAA_RATIO": 1.0,
+    "BIOPATHNET_PEAK_MB": 526.873046875,
+    "QRTC_ON_PEAK_MB": 529.55078125
+  },
+  "synthetic_ratios": {
+    "R_WRAPPER": 0.9990939605069378,
+    "R_QRTC": 1.2118919816515452,
+    "R_TOTAL": 1.2107939596548434
+  },
+  "locks": {
+    "QRTC_FORWARD_RUNTIME_FORENSIC": "PASS__ALGORITHM_DOMINANT",
+    "ROOT_CAUSE_FORWARD": "ALGORITHM_DOMINANT_WITH_OPTIMIZABLE_ON_PATH_OVERHEAD",
+    "QRTC_WRAPPER_OVERHEAD": "NEGLIGIBLE",
+    "QRTC_WRAPPER_BACKBONE_OVERHEAD": "ABSENT",
+    "DUPLICATE_PROPAGATION": false,
+    "QRTC_FORWARD_INCREMENTAL_COST": "MATERIAL",
+    "QRTC_ON_ENGINEERING_DEBT": "PRESENT",
+    "QRTC_READOUT_ONLY_CONTRACT": "CONTRADICTED_BY_RECOVERED_IMPLEMENTATION",
+    "MANUSCRIPT_CLAIM_AUDIT": "PASS__CASE_A__SUBMITTED_TEX_ABSENT_ON_HOST",
+    "QRTC_RUNTIME_OPTIMIZATION_V1": "IN_PROGRESS__OPT1_PASS__OPT2_PASS",
+    "OPT1": "PASS__OPT1_SEMANTICS_PRESERVING",
+    "OPT2": "PASS__OPT2_SEMANTICS_PRESERVING",
+    "HEADROOM_V1": "NOT_AUTHORIZED",
+    "NEW_PAIR_KG_MODEL": "FORBIDDEN",
+    "HISTORICAL_MULTIX_EPOCH_SLOWDOWN": "NOT_EXPLAINED_BY_FORWARD_47PCT_ALONE"
+  },
+  "working_description": "QRTC-HR is a relation-conditioned multi-stage reasoning intervention; relation gating participates in message passing, combined with hop/state-level routing/readout.",
+  "deprecated_label": "readout-only intervention",
+  "opt1": {
+    "status": "PASS__OPT1_SEMANTICS_PRESERVING",
+    "R_QRTC_old": 1.474,
+    "R_QRTC_new": 1.4738,
+    "R_QRTC_before_locked": 1.471,
+    "note": "OPT-1 equivalence PASS; speed gain negligible on this microbench"
+  },
+  "top5": [
+    "accumulate_qrtc_rel_usage_chunked rematerializes DistMult edge messages in Python chunks (measured calls == #layers)",
+    "compute_qrtc_relation_gate expands R\u00d7B\u00d7d and runs gate MLP each layer",
+    "unconditional precedent topk_ids/weights .detach().cpu() sync in _qrtc_prepare_layer_state",
+    "R_wrapper\u22481.00 (QRTC-off \u2248 BioPathNet; wrappers not on fused hot path)",
+    "R_qrtc\u22481.47 / R_total\u22481.47; maa_ratio=1.0 (no duplicate propagation)"
+  ],
+  "contract": {
+    "SHARED_PROPAGATION_BACKBONE": true,
+    "QRTC_ONLY_FINAL_READOUT": false,
+    "B_EQUALS_C_SCORES": true,
+    "D_INTENTIONALLY_DIFFERS": true
+  },
+  "next_priority": [
+    "OPT-3 / OPT-4 with per-step equivalence (PRE_OPT2 no longer the runtime old; use post-OPT2 WORK)",
+    "Forward / forward+backward / validation wall-clock decomposition for historical multi-x epoch",
+    "Complete submitted-manuscript claim audit if tex/pdf arrives (Case B reopen only)",
+    "NBFNet/BioPathNet seed0 may proceed in parallel"
+  ],
+  "RETURN_DIR": "<REDACTED_SERVER_PATH>",
+  "opt1_reaudit": {
+    "FINAL_STATUS": "PASS__OPT1_SEMANTICS_PRESERVING",
+    "formal_topk": 2,
+    "R_QRTC_old": 1.4660135029362082,
+    "R_QRTC_new": 1.4702326119972964,
+    "R_QRTC_before_locked": 1.471,
+    "independent_reaudit": "23_INDEPENDENT_LINE_REAUDIT_20260908.md",
+    "note": "Prior OPT-1 used TOPK=4; reaudit corrected to formal TOPK=2. Speed gain still negligible."
+  },
+  "opt2": {
+    "FINAL_STATUS": "PASS__OPT2_SEMANTICS_PRESERVING",
+    "formal_topk": 2,
+    "pre_opt2_baseline": "02_runtime_opt_v1/PRE_OPT2_BASELINE",
+    "R_QRTC_pre": 1.47,
+    "R_QRTC_old_rematerialize": 1.461,
+    "R_QRTC_new_sufficient": 1.207,
+    "usage_microbench_speedup": 3.78,
+    "seal": "02_runtime_opt_v1/OPT2/OPT2_SEAL.md",
+    "note": "Exact DistMult mean-abs usage via |rel|*sum_|inp| sufficient statistic; qrtc_usage_mlp still inactive on fused path."
+  },
+  "claim_case": "A"
+}

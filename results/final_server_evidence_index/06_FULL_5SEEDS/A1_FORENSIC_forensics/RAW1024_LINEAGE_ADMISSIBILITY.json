@@ -1,0 +1,202 @@
+{
+  "cell": "RAW_QRTC_seed1024",
+  "panel": "16_A1_QRTC_METHOD_PANEL_15RUN",
+  "audit_utc": "2026-10-02T08:35:00Z",
+  "independent_reverify_utc": "2026-10-02T08:55:00Z",
+  "gpu_actions": "none",
+  "process_label_path": [
+    "HOLD__EXECUTION_CONTAMINATION_REQUIRES_LINEAGE_ADJUDICATION",
+    "ADMISSIBLE__FRESH_COMPLETED_LINEAGE"
+  ],
+  "adjudication_rule": "MRR_AND_SCIENTIFIC_QUALITY_MUST_NOT_ENTER_LINEAGE_DECISION",
+
+  "observed_result": {
+    "mrr": 0.1946338713169098,
+    "hits_at_1": 0.11369990557432175,
+    "ap": 0.9015024304389954,
+    "auroc": 0.8937418460845947,
+    "receipt": "receipts/RAW_QRTC_seed1024_RECEIPT.json",
+    "metrics_json": "runs/RAW_QRTC_seed1024_eval/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-09-27-09-52-13-067870/A1_TEST_METRICS.json"
+  },
+
+  "pre_lineage_findings": {
+    "EVAL_ERROR": "HIGH_CONFIDENCE_EXCLUDED",
+    "TRAINING_DIVERGENCE": "ESTABLISHED",
+    "bce_by_epoch": [0.49859, 0.480004, 0.477848, 0.479541, 0.475958, 0.512467, 0.560691, 0.559262],
+    "execution_accident_background": {
+      "train_attempts": 30,
+      "oom_count": 28,
+      "failed_sibling_workdir_count": 29,
+      "dual_orchestrator": true,
+      "panel_fatal_while_train_live": true,
+      "guardian_attach_train_waiter": true
+    }
+  },
+
+  "interim_status_before_lineage_knife": "HOLD__EXECUTION_CONTAMINATION_REQUIRES_LINEAGE_ADJUDICATION",
+
+  "winning_lineage": {
+    "working_directory": "runs/RAW_QRTC_seed1024/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-09-27-04-47-10-225368",
+    "train_start_cst": "2026-09-27T04:47:10",
+    "train_end_cst": "2026-09-27T09:51:51",
+    "heartbeat_train_pid": 1384252,
+    "heartbeat_utc": "20260926T204708Z",
+    "config": "configs/RAW_QRTC_seed1024_train.yaml",
+    "resume_config_exists": false,
+    "cold_start": true,
+    "done_epoch_at_start": 0,
+    "source_run_py": "<REDACTED_SERVER_PATH>",
+    "dataset_path": "<REDACTED_SERVER_PATH>",
+    "seed": 1024,
+    "qrtc_env": {
+      "QRTC_ENABLE": "1",
+      "QRTC_USE_MEMORY": "1",
+      "QRTC_TOPK": "2",
+      "QRTC_MEMORY_ALPHA": "0.35",
+      "QRTC_FEEDBACK_STATE_MODE": "canonical_raw",
+      "QRTC_CAND_READOUT_ENABLE": "0",
+      "QRTC_DIAGNOSTIC_LOG": "0",
+      "QRTC_SKIP_OPTIMIZER_LOAD": "0",
+      "QRTC_RELUSAGE_CHUNK": "262144"
+    },
+    "epoch8_sha256": "d4874222a223ba905a11adddc8293f295cef7a13a064fcd8d121eeb7100df58d",
+    "epoch8_mtime_cst": "2026-09-27T09:51:51",
+    "epoch8_overwritten_after_train": false
+  },
+
+  "eight_checks": [
+    {
+      "id": "C1",
+      "name": "fresh_initialization_not_resume_from_failed_attempts",
+      "verdict": "PASS",
+      "evidence": [
+        "done_epoch=0",
+        "cold yaml only; no RAW_QRTC_seed1024_train_RESUME.yaml",
+        "no Load checkpoint / Resume mode in winning log",
+        "29 failed siblings have 0 .pth files"
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "winning_workdir_exclusive_writer",
+      "verdict": "PASS",
+      "unit": "torchdrug_working_directory_not_parent_output_dir",
+      "evidence": [
+        "winning dir contains only log.txt + model_epoch_1..8.pth",
+        "parent has sibling failed dirs with log.txt only",
+        "epoch8 birth=mtime=ctime at train end"
+      ]
+    },
+    {
+      "id": "C3",
+      "name": "winning_trainer_8_epochs_continuous_no_oom",
+      "verdict": "PASS",
+      "evidence": [
+        "exactly 8 Save checkpoint lines, all in winning block",
+        "~38.00 min epoch spacing",
+        "no OOM/traceback in winning block",
+        "clean smoke_skip_valid termination"
+      ]
+    },
+    {
+      "id": "C4",
+      "name": "source_yaml_seed_qrtc_env_match_frozen_contract",
+      "verdict": "PASS",
+      "evidence": [
+        "SOURCE_RESTORE run.py via frozen launcher",
+        "launcher SHA matches run_a1_cell lock",
+        "YAML differs from seed1025 only by output_dir",
+        "QRTC env dump matches RAW contract"
+      ]
+    },
+    {
+      "id": "C5",
+      "name": "epoch1_to_8_same_pid_or_lineage",
+      "verdict": "PASS",
+      "caveat": "PID recorded only at spawn (heartbeat not refreshed after panel FATAL); lineage uniqueness established by exclusive workdir + continuous log + cadence",
+      "evidence": [
+        "train_pid=1384252 at start",
+        "single working directory",
+        "no second Working directory line after start",
+        "contiguous exclusive checkpoint set"
+      ]
+    },
+    {
+      "id": "C6",
+      "name": "epoch8_not_overwritten",
+      "verdict": "PASS",
+      "evidence": [
+        "birth=mtime=ctime 2026-09-27 09:51:51",
+        "sha256 d4874222a223ba905a11adddc8293f295cef7a13a064fcd8d121eeb7100df58d"
+      ]
+    },
+    {
+      "id": "C7",
+      "name": "evaluator_loaded_only_this_epoch8",
+      "verdict": "PASS",
+      "evidence": [
+        "eval cfg/log/receipt identical path",
+        "dual EVAL_BEGIN both targeted same ckpt",
+        "one A1_TEST_METRICS.json",
+        "orphan eval dir 09-52-10 empty"
+      ]
+    },
+    {
+      "id": "C8",
+      "name": "failed_attempts_pre_metric_no_cherry_pick",
+      "verdict": "PASS",
+      "evidence": [
+        "failed logs stop at Epoch 0 begin + OOM",
+        "0 formal metrics before winning completion",
+        "exactly one receipt / one metrics JSON"
+      ]
+    }
+  ],
+
+  "checks_summary": {
+    "pass": 8,
+    "fail": 0,
+    "unresolved": 0
+  },
+
+  "final_lineage_verdict": "ADMISSIBLE__FRESH_COMPLETED_LINEAGE",
+
+  "panel_implication": {
+    "include_in_a1_primary_5seed": true,
+    "reason": "Lineage admissibility is result-blind; ugly MRR is not grounds for exclusion or secret rerun",
+    "rerun_authorized": false,
+    "endpoint_remains": "model_epoch_8.pth",
+    "do_not_switch_to_epoch5": true
+  },
+
+  "rejected_labels": [
+    "INVALID__EXECUTION_FAILURE",
+    "INVALID__EXECUTION_LINEAGE_NOT_ISOLATED",
+    "UNRESOLVED__LINEAGE_EVIDENCE_INSUFFICIENT"
+  ],
+
+  "related_cells_status_unchanged": {
+    "BASE_seed1026": "INTERRUPTED__HOST_REBOOT",
+    "panel_zombie_locks": "cleared_2026-10-02",
+    "resume_training": "not_authorized",
+    "panel_status": "PAUSED__RAW1024_LINEAGE_ADJUDICATED__HARNESS_V2"
+  },
+
+  "final_pass_harness_fixes_utc": "2026-10-02T09:00:00Z",
+  "final_pass_harness_fixes": [
+    "P0_guardian_panel_flock_probe_FD7",
+    "P1_guardian_skip_bounce_during_GPU_WAIT",
+    "P1_shim_hash_locked_and_path_scrubbed",
+    "P1_extract_metrics_cell_scoped_no_cross_cell",
+    "P2_train_pids_tightened",
+    "P2_gpu_gate_before_eval",
+    "P2_waiter_glog_dedup"
+  ],
+
+  "artifacts": {
+    "audit_md": "forensics/RAW1024_FORENSIC_AUDIT.md",
+    "admissibility_json": "forensics/RAW1024_LINEAGE_ADMISSIBILITY.json",
+    "design_reaudit": "forensics/DESIGN_LINE_INDEPENDENT_REAUDIT_20261002.md",
+    "erratum": "authority/A1_EXECUTION_CHAIN_ERRATUM_V2.md"
+  }
+}

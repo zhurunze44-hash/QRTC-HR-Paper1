@@ -1,0 +1,46 @@
+# PC_KEGG withBRG — QRTC memory_off ablation — full valid only (no cap).
+# Run: script/eval_valid_only.py + env contract (QRTC_* + module disables).
+# Do not set EVAL_VALID_CAP / EVAL_TEST_CAP for formal metrics.
+
+checkpoint: /root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/qrtc_ablation_20260509/pc_kegg_withbrg_qrtc_memory_off_seed1024_epoch8/KnowledgeGraphCompletionBiomed/biomedical/NBFNet/2026-05-09-16-53-28-980276/model_epoch_8.pth
+
+output_dir: paper1_q2_sci_package_20260428/qrtc_ablation_20260509/pc_kegg_withbrg_qrtc_memory_off_epoch8_fullvalid_eval_20260509
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: yes
+    layer_norm: yes
+    dependent: yes
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 16
+
+train:
+  smoke_skip_valid: yes
+  num_epoch: 8
+
+metric: mrr

@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-03T03:55:00Z",
+  "scope": "Close unfinished LAST_CHANCE independent re-audit after repaired scientific re-run",
+  "canonical_source_modified": false,
+  "prior_session_gap": {
+    "what_was_done": "R1-R10 code repairs; quarantine of invalid SELECTED/G3; full pipeline re-run to G2",
+    "what_was_missing": "Final integrity closeout receipt; explicit G3 SKIPPED marker; user-facing completion verdict"
+  },
+  "scientific_re_run": {
+    "log": "receipts/pipeline_all_rerun_20261003.log",
+    "ended_utc": "2026-10-03T03:46:36Z",
+    "runtime_status": "NO_INVESTMENT_SIGNAL",
+    "wall_sec": 82.84741067886353,
+    "gpu_peak_mib": 8758.35205078125,
+    "new_training_runs": 0,
+    "optimizer_step": 0,
+    "backward": 0,
+    "test_used_for_selection": false
+  },
+  "gate_outcomes": {
+    "G0_replay_pass": {"LNC": true, "PC": true},
+    "G1_signal_gate_practical_signal": true,
+    "G1_lnc_zero_abs_delta_mrr": 0.003561404759472429,
+    "G2_candidate_status": "NOT_SELECTED",
+    "G2_design_delta_mrr_scaled_correct_ga": -0.010520068313048952,
+    "G2_design_delta_mrr_unscaled_diagnostic": -0.007843413115314526,
+    "G2_N_constant": true,
+    "G2_U_eq_gNA_max_rel_max": 0.002365661782550552,
+    "G2_trace_only_vs_noop_delta_mrr": 0.0,
+    "G3": "SKIPPED_NOT_SELECTED"
+  },
+  "integrity_checks_pass": [
+    "Primary eligible checkpoints/source/config/data LIVE_SHA_MATCH_SEALED",
+    "DESIGN_CHECK_SPLIT.tsv sha256 matches DESIGN_CHECK_SPLIT.hash",
+    "LNC/PC design∩check empty; partitions cover all VALID lines",
+    "SOURCE_RESTORE model.py sha sealed + mode 0444",
+    "CANDIDATE_FREEZE numbers match G2_SUMMARY probe deltas",
+    "No live SELECTED freeze; invalid prior SELECTED quarantined",
+    "Code guards present: repair-direction freeze, scale-matched correct_ga, _safe_print, signal_gate persist, group bootstrap"
+  ],
+  "defects_closed": [
+    "R1_G2_ABS_DELTA_FREEZE",
+    "R2_CORRECT_GA_SCALE_OOD",
+    "R3_G1_FRAC_DROP_FALSE_SIGNAL",
+    "R4_BOOTSTRAP_TRIPLE_NOT_GROUP",
+    "R5_DECISION_DROPPED_G2",
+    "R6_ZERO_ID_FACTOR_SIDE_EFFECTS",
+    "R7_TICK_BROKENPIPE_ABORTS_RUN",
+    "R8_G1_SIGNAL_GATE_NOT_PERSISTED",
+    "R9_OVERLAY_STATS_CROSS_MODE_POLLUTION",
+    "R10_STALE_SELECTED_UNDER_FAILED_RERUN",
+    "R11_G3_SKIP_MARKER_ON_NOT_SELECTED"
+  ],
+  "design_line_verdict": {
+    "gpt_protocol_line_had_structural_flaws": true,
+    "flaws": [
+      "U≈g*N*A near-identity under declared factors is not independent empirical discovery",
+      "Prior |ΔMRR| freeze allowed harmful intervention to unlock G3 (mis-run)",
+      "Literal unscaled g*A confounds TopK reorder with attention scale OOD",
+      "G1 frac_drop-alone treated rank churn as investment signal"
+    ],
+    "after_repair_answerable_question": "Does scale-matched g*A improve D_design MRR in repair direction while N is static?",
+    "answer": "No. N static; scale-matched correct_ga hurts design MRR (Δ≈-0.0105). Candidate NOT_SELECTED; D_check not opened; NO_INVESTMENT_SIGNAL."
+  },
+  "unchanged_authority": {
+    "CMPB": "PAPER1_CMPB_FINAL_NO_NEW_TRAINING_V1_20261002 remains COMPLETE__WRITING_ANALYSIS_ONLY / NO_NEW_TRAINING=PERMANENT",
+    "A1": "PAPER1_FEEDBACK_STATE_VALIDITY_V1_20260924 remains A1_15RUN_PAUSED; A2/A3 unauthorized; not paper credit",
+    "SOURCE": "QRTC_HR_SOURCE_RESTORE_20260908 read-only; overlay-only patches"
+  },
+  "final_status": "CLOSED__NO_INVESTMENT_SIGNAL__REPAIR_RERUN_VERIFIED"
+}

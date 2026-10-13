@@ -1,0 +1,46 @@
+PAPER1_CMPB_REMEDIATION_TERMINAL=COMPLETE__WRITING_ANALYSIS_ONLY
+
+UTC_NOTE=2026-10-02 continuation after env interrupt; no training; no A1
+
+AUTHORITATIVE_ASSET_AUDIT=PARTIAL
+NEW_TRAINING_RUNS=0
+OPTIMIZER_STEPS=0
+A1_RESULTS_USED_IN_MANUSCRIPT=false
+SCIENTIFIC_SOURCE_MODIFIED=false
+A1_R_AUTHORIZED=false
+PAPER1_NO_NEW_TRAINING=PERMANENT
+
+QUERY_LEVEL_ANALYSIS=COMPLETE
+PAIRED_BOOTSTRAP=COMPLETE
+RELATION_LEVEL_ANALYSIS=PARTIAL
+PARAMETER_OVERHEAD=COMPLETE
+RUNTIME_OVERHEAD=PARTIAL
+REPRODUCIBILITY_PACKAGE=GENERATED
+METHOD_IDENTITY_AUDIT=GENERATED
+CLAIM_EVIDENCE_AUDIT=GENERATED
+
+CMPB_MANUSCRIPT=READY_TEX
+CMPB_MANUSCRIPT_PDF=CONTENT_PDF_OFFLINE
+CMPB_SUPPLEMENT=READY_TEX
+CMPB_SUPPLEMENT_PDF=CONTENT_PDF_OFFLINE
+ELSEVIER_TYPESET_PDF=BLOCKED__NO_TEX_BUNDLE_OR_NETWORK
+
+REVISION_SURVIVABILITY_C_COUNT=9
+CRITICAL_UNANSWERABLE_RISKS=4
+
+NARRATIVE_LOCKS=
+- PC_wBRG Win/Tie/Loss=3627/5945/3304 (corrected; prior interrupt memo swapped Tie/Loss)
+- MUST NOT claim majority-query / most-queries improvement
+- Seeds 1025/1026 and Top-K formal = UNRESOLVED = omitted from core evidence
+- PC woBRG BAD_RERUN rankpair permanently excluded
+- GATE_ONLY renamed to memory-off gated/init variant
+- Bootstrap = frozen-checkpoint test-query sampling CI; not seed uncertainty
+
+PARAMETER_OVERHEAD_SUMMARY=
+- PC_wBRG total state_dict=343911 (Base=QRTC=memory-off identical instantiation)
+- QRTC_module_tensors=11620 (+3.497% vs backbone 332291)
+- Formal-active ~5314; capacity confound remains
+
+FINAL_OUTPUT_ROOT=<REDACTED_SERVER_PATH>
+
+STOPLOSS=If CMPB acceptance conditioned on new multi-seed / new datasets / parameter-matched retrain / generic KG / retrain-for-dumps -> end CMPB, transfer BMC; do not reopen Paper1 training.

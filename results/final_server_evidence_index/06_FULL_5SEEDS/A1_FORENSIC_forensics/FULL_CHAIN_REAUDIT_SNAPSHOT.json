@@ -1,0 +1,337 @@
+{
+  "snapshot_utc": "2026-10-02T09:23:23Z",
+  "gpu_touched": false,
+  "training_started": false,
+  "git": {
+    "note": "NO_GIT_ROOTS under paper1 / panel / SOURCE_RESTORE \u2014 provenance cannot use git SHA",
+    "panel": null,
+    "base": null,
+    "source_restore": null
+  },
+  "gpu": {
+    "apps": [
+      {
+        "pid": 2864,
+        "name": "gnome-remote-desktop-daemon",
+        "mib": 392
+      }
+    ],
+    "a1_trainers": "none"
+  },
+  "authority_files": {
+    "A1_AUTHORIZATION.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "7c5f2cce4b44643620188bd1a3ae95ed0d0127c51adada1db9cf9261afd06602",
+      "size": 1810,
+      "mtime": "2026-09-25T11:01:34+0800"
+    },
+    "A1_EXECUTION_CHAIN_ERRATUM_V1.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d97d90d97cfa1e4e7c4f343ab72bdd840627818b6632bed0dbec718d6db137be",
+      "size": 1965,
+      "mtime": "2026-09-25T11:17:50+0800"
+    },
+    "A1_EXECUTION_CHAIN_ERRATUM_V1.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "5dc2ce7506d3840b1a3756932e3f0a2c9fa8f5ecb04f3a35a956c248441dcbda",
+      "size": 7198,
+      "mtime": "2026-09-25T11:18:12+0800"
+    },
+    "A1_EXECUTION_CHAIN_ERRATUM_V2.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "65eaff009f35827e07e3641606a6fbb98f084b5c580c2aa09c92dbc8e2597ab5",
+      "size": 5060,
+      "mtime": "2026-10-02T17:01:15+0800"
+    },
+    "A1_SCIENTIFIC_INTERPRETATION_FREEZE.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "97329ed49509fef21d3e712c2ff9c40c4659fe168b427c2f96ace5ded1f7490e",
+      "size": 805,
+      "mtime": "2026-09-25T11:17:09+0800"
+    },
+    "FINAL_REAUDIT_20260925.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "6cf122c01e224c051a65ddf4563d68d963a2f606763d1a3651bb8c400e03634d",
+      "size": 1376,
+      "mtime": "2026-09-25T11:14:00+0800"
+    },
+    "FINAL_REAUDIT_CHECKLIST_20260925.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "883ab35e23a548d146ee3a2dd6d4213bb0ffb3877daa470150f7300d30e7b07a",
+      "size": 988,
+      "mtime": "2026-09-25T11:13:35+0800"
+    },
+    "HARNESS_HASH_LOCK.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "bc33678b756a36d19b46391ec26c299806ddefccb15585fc0d7e379816c28c3f",
+      "size": 727,
+      "mtime": "2026-10-02T17:01:33+0800"
+    },
+    "INDEPENDENT_LINE_AUDIT_20260925.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d4e78658dd4ae8cc3378d02a20a8de3c9d19832db1adbb976195e163fc97d2cb",
+      "size": 841,
+      "mtime": "2026-09-25T11:11:20+0800"
+    },
+    "INDEPENDENT_LINE_AUDIT_20260925.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "61b337f52ae558704aba9a829c7d66b8b8a0b426958d328202a031c767dffe12",
+      "size": 4556,
+      "mtime": "2026-09-25T11:11:19+0800"
+    },
+    "LIVE.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d367eef8cea579a93d071bf18281424d13a612dc0d6813c0735a59f3fa550188",
+      "size": 138,
+      "mtime": "2026-09-25T11:03:19+0800"
+    }
+  },
+  "forensics_existing_before_this_audit": {
+    "DESIGN_LINE_INDEPENDENT_REAUDIT_20261002.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "72a6c5e327967c1ad2ae3750f2937b2cbec35c57a5644d9c640262152fed6f59",
+      "size": 7088,
+      "mtime": "2026-10-02T17:01:34+0800"
+    },
+    "RAW1024_FORENSIC_AUDIT.md": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "ae1c6ea0d8713d24c733165f05441ded8a62777437acf49fe0f6ea0960e5914b",
+      "size": 10702,
+      "mtime": "2026-10-02T16:52:03+0800"
+    },
+    "RAW1024_LINEAGE_ADMISSIBILITY.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "09434fa19d42ddf27b3a0095be4dc5ee7173a44eb1a1a5e7d9ed0824cf8eb9ec",
+      "size": 6828,
+      "mtime": "2026-10-02T17:01:48+0800"
+    }
+  },
+  "harness_scripts_now": {
+    "a1_eval_full_test_metrics_only.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d336b56230a7bc918d2d42a166fb4b27202e91fa643848d387d99a56e76cb037",
+      "size": 5880,
+      "mtime": "2026-09-25T11:13:57+0800"
+    },
+    "a1_health_guardian.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "fcb78a5bb7bffce0f13d9b123d07a84f169886044e5b1b9c3348d2b4f2ff5169",
+      "size": 7403,
+      "mtime": "2026-10-02T16:58:37+0800"
+    },
+    "a1_train_shim.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "a1c8d9b4fbb6afed9883bdf9b22fd1c064dbcba0232f7b800e8358b2cf012727",
+      "size": 3998,
+      "mtime": "2026-10-02T16:58:50+0800"
+    },
+    "extract_a1_metrics.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d904cafced48b45194904d51711b7cd3779c15665964adb438543ec1e2cff2a3",
+      "size": 3918,
+      "mtime": "2026-10-02T16:59:01+0800"
+    },
+    "run_a1_cell.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "8a697abe44391e8d9fe22a86f5e716971611dcf31bf43d7beac120f67f30e8e6",
+      "size": 16159,
+      "mtime": "2026-10-02T17:00:09+0800"
+    },
+    "run_a1_panel_oneshot.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "bc4a324e8dc2b6edee5594aeec9ac5755c7f8e55f3278201ec10519758759f8f",
+      "size": 4293,
+      "mtime": "2026-10-02T16:37:17+0800"
+    },
+    "seal_base1024_orphan_lineage.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "9d12eb75fdd65f3139712f89eb05189e3a1641c3983ff2dd4044f495ebca0c3c",
+      "size": 1551,
+      "mtime": "2026-09-25T11:17:17+0800"
+    },
+    "watch_train_then_resume_panel.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "37d3726bab91220664d6dc83a98f113d7a3780bc5d76cd9f2a94fd42d9f8ee8c",
+      "size": 2238,
+      "mtime": "2026-09-25T14:09:36+0800"
+    }
+  },
+  "launchers": {
+    "a1_launch_BASE.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "500a220b937564e691c16a1699d07edb2dbff6179fd702863b566a4cd8563965",
+      "size": 3388,
+      "mtime": "2026-09-25T10:44:05+0800"
+    },
+    "a1_launch_GATE_ONLY.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "b45d10cd53dedc4b830088c38f8d8ee7e59f7a8003d1c97896f69c331a2474f0",
+      "size": 3254,
+      "mtime": "2026-09-25T10:44:05+0800"
+    },
+    "a1_launch_RAW_QRTC.sh": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d9857317207278b8daccaddf11729562ca20e0eec9ca69622d418fd59d0fcf1d",
+      "size": 3419,
+      "mtime": "2026-09-25T10:44:05+0800"
+    }
+  },
+  "source_restore_key_files": {
+    "biopathnet/model.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+      "size": 121495,
+      "mtime": "2026-05-06T12:44:32+0800"
+    },
+    "biopathnet/layer.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657",
+      "size": 33468,
+      "mtime": "2026-05-05T16:12:24+0800"
+    },
+    "biopathnet/qrtc_common.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f",
+      "size": 3343,
+      "mtime": "2026-05-05T16:12:17+0800"
+    },
+    "biopathnet/task.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc",
+      "size": 52926,
+      "mtime": "2026-04-27T14:31:59+0800"
+    },
+    "biopathnet/util.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7",
+      "size": 6812,
+      "mtime": "2026-05-06T12:31:04+0800"
+    },
+    "script/run.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "5f945607d93b25af96f4cdd463b9aa524eb371a1ff60eb238695049151ef6ebb",
+      "size": 6407,
+      "mtime": "2026-05-06T12:23:54+0800"
+    },
+    "script/eval_valid_only.py": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "431bc9e581e6ddddbda9c0a8e01a5e73eb8c9bace0492fde3c1aacc884fbe340",
+      "size": 15605,
+      "mtime": "2026-05-08T13:20:20+0800"
+    }
+  },
+  "dataset_files": {
+    "train1.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "7eada252e712da7788f02a546e66dfa9ce3fb6f60be29af493de5b561f0d02e3",
+      "size": 60999631,
+      "mtime": "2026-04-28T19:08:02+0800"
+    },
+    "train2.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "f6d20ef0e055091bf16e02451b3423bb9f6c6a51a6c1413d6b2bf3174548153f",
+      "size": 616470,
+      "mtime": "2026-04-28T19:05:18+0800"
+    },
+    "valid.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "41e111bc36fe68fa14b6d39a51b63b9cb17ab9998e607921a892ae01bf115259",
+      "size": 87483,
+      "mtime": "2026-04-28T19:05:18+0800"
+    },
+    "test.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d002b54d454ee0344c53ec712079e7b93bc612f31409fa68b659ff47d6c11f48",
+      "size": 174717,
+      "mtime": "2026-04-28T19:05:18+0800"
+    }
+  },
+  "receipts": {
+    "BASE_seed1024_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "2d530f479b8a26ee5ebb7ba2bac2f6f471e3dfa80520b9a47e85b3a57b3683ef",
+      "size": 1006,
+      "mtime": "2026-09-25T21:53:34+0800"
+    },
+    "BASE_seed1025_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "0fcb8be57cf991ee4098ed613dc186e3d447748f338cb6d8907ca19e2718dea4",
+      "size": 1006,
+      "mtime": "2026-09-28T08:02:43+0800"
+    },
+    "GATE_ONLY_seed1024_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "259239ac96578db9ca5966a8fb0f5fbc5d91388f9ae9155158d8f708a917590a",
+      "size": 1029,
+      "mtime": "2026-09-27T04:13:50+0800"
+    },
+    "GATE_ONLY_seed1025_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "3c6df5afe90d73593a9fd10cd4af94fba5772fb69eef3cd3b113f6a66d321866",
+      "size": 1031,
+      "mtime": "2026-09-29T09:52:32+0800"
+    },
+    "PANEL_LIVE_STATUS.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "5c584480865ce5d174ad469d4d2579c2120c9dba94f034c472ac2bc234f355d8",
+      "size": 828,
+      "mtime": "2026-10-02T16:51:53+0800"
+    },
+    "RAW_QRTC_seed1024_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "653df876230cd7a1faca95f9c1553df42ace58d2e85d4707b549c56954c40683",
+      "size": 1026,
+      "mtime": "2026-09-27T21:25:13+0800"
+    },
+    "RAW_QRTC_seed1025_RECEIPT.json": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "c08dd64f98ea3b588772f4f5c532817604039568907cfeeec0fad4844ad6d169",
+      "size": 1027,
+      "mtime": "2026-09-30T11:49:18+0800"
+    },
+    "RUNTIME_AT_PANEL_START.txt": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "e1fcfe770f4cabf7b640bd5bc7fe98b1f4b7d79b62654bff18e3926fdd0d47e6",
+      "size": 37,
+      "mtime": "2026-09-25T11:02:32+0800"
+    }
+  },
+  "completed_epoch8": {
+    "BASE_seed1024": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "98f65e3e58f0901505a7b8648197d2e53e63955e4e03a764934746cac9aaca3e",
+      "size": 111116427,
+      "mtime": "2026-09-25T17:42:09+0800"
+    },
+    "BASE_seed1025": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "2ca518526e24a040b4b9aee97ff3901bafca9e6a5e3f202abcdd4e1428b9b442",
+      "size": 111116427,
+      "mtime": "2026-09-28T01:01:15+0800"
+    },
+    "GATE_ONLY_seed1024": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "db05fc469fd2ff3cab6473521a520db2811d6ef2fc4ed7ce7883de687836eced",
+      "size": 111146055,
+      "mtime": "2026-09-26T02:57:43+0800"
+    },
+    "GATE_ONLY_seed1025": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "2c96184b991cb0376139fb19157a3ba92cec678b036742f4a4acefe0904802bd",
+      "size": 111146055,
+      "mtime": "2026-09-28T13:07:41+0800"
+    },
+    "RAW_QRTC_seed1024": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "d4874222a223ba905a11adddc8293f295cef7a13a064fcd8d121eeb7100df58d",
+      "size": 111166583,
+      "mtime": "2026-09-27T09:51:51+0800"
+    },
+    "RAW_QRTC_seed1025": {
+      "path": "<REDACTED_SERVER_PATH>",
+      "sha256": "25093e8d8c60c9ac6132a89a601a73643ebac3d2d2fa01225b9e8e9fad601c25",
+      "size": 111166583,
+      "mtime": "2026-09-29T15:04:56+0800"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+patch,semantic_class,may_change_imported_source_or_metrics,note
+PID_lock_to_flock_singleton,OPERATIONAL_ONLY,N,prevents dual drivers
+A1_PANEL_FLOCK_FD7_probe_fix,OPERATIONAL_ONLY,N,guardian recovery
+wait_existing_train_3600_to_stall_only,OPERATIONAL_ONLY,N,false FATAL removal
+GPU_occupancy_gate,OPERATIONAL_ONLY,N,when train starts
+guardian_stale_log_bounce_prevention,OPERATIONAL_ONLY,N,recovery
+wait_state_heartbeat,OPERATIONAL_ONLY,N,status/log mtime
+train_shim_hash_lock,OPERATIONAL_ONLY,N,provenance gate
+train_shim_sys_path_scrub,POTENTIALLY_SCIENCE_AFFECTING,Y_if_ambient,can change imported source on resume path
+eval_sys_path_scrub,POTENTIALLY_SCIENCE_AFFECTING,Y_if_ambient,eval import path
+extract_panel_global_to_per_cell_JSON,POTENTIALLY_SCIENCE_AFFECTING,Y_if_poisoned,audited: 6 receipts already cell-scoped
+cross_cell_pointer_REFUSE,OPERATIONAL_ONLY,N,fail-closed extract
+pgrep_tightening,OPERATIONAL_ONLY,N,process match
+eval_GPU_gate,OPERATIONAL_ONLY,N,when eval starts
+waiter_GLOG_dedup,OPERATIONAL_ONLY,N,logging
+logc_tee_redirect_fix,OPERATIONAL_ONLY,N,logging
+metric_extractor_MR_MRR_fix,SCIENCE_AFFECTING,Y_metrics,definition/extraction; completed cells used JSON path
+eval_JSON_tensor_key_serialization,SCIENCE_AFFECTING,Y_metrics,metric dump format
+cwd_eval_writable_dir_fix,OPERATIONAL_ONLY,N,eval could not write under 555 SOURCE_RESTORE

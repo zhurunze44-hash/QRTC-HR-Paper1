@@ -1,0 +1,61 @@
+{
+  "utc": "2026-10-03T01:45:00Z",
+  "scope": "LAST_CHANCE zero-training pipeline audit + defect repair before scientific re-run",
+  "canonical_source_modified": false,
+  "findings": [
+    {
+      "id": "F1_U_EQ_SELF_CHECK",
+      "severity": "critical",
+      "status": "fixed",
+      "detail": "G2 previously logged U_eq_gNA as overlay factorU vs factor(g*N*A), which is algebraically tautological. Now compares formal rel_usage_next to reconstructed g*N*A with relative tolerance 5e-3 (absolute 1e-4 is invalid once |U|~1e4-1e5 under float32/chunked scatter)."
+    },
+    {
+      "id": "F2_TRACE_AS_RAW_BASELINE",
+      "severity": "high",
+      "status": "fixed",
+      "detail": "G2 correct_ga delta previously used trace_only rows as RAW baseline. Now uses explicit noop RAW rows and asserts trace_only does not change ranks."
+    },
+    {
+      "id": "F3_BASE_ENV_UNSET",
+      "severity": "medium",
+      "status": "fixed",
+      "detail": "BASE load did not actively unset QRTC_USE_MEMORY/QRTC_TOPK from os.environ after a RAW load in-process. Contract requires unset; apply_env now pops them."
+    },
+    {
+      "id": "F4_TQDM_BROKENPIPE",
+      "severity": "high",
+      "status": "fixed",
+      "detail": "Prior full run died on tqdm BrokenPipe during second dataset load under redirected logs. Force TQDM_DISABLE + patch tqdm.disable=True at load_solver/main."
+    },
+    {
+      "id": "F5_VALID_LINE_INDEX_MAP",
+      "severity": "critical",
+      "status": "already_fixed_pre_audit",
+      "detail": "DESIGN_CHECK abs_index is valid.txt line index; set_valid_line_indices maps to torchdrug absolute indices. Incomplete pre-audit run quarantined."
+    },
+    {
+      "id": "F6_SOLVER_CACHE",
+      "severity": "medium",
+      "status": "already_fixed_pre_audit",
+      "detail": "Repeated load_solver for mode switches caused cost/BrokenPipe risk; solver cache + set_last_chance_mode reused."
+    },
+    {
+      "id": "F7_LINE_DESIGN_SOUNDNESS",
+      "severity": "design_note",
+      "status": "documented",
+      "detail": "For DistMult fused path, U=sum_e mean_d |g*rho*h| factors as g*N*A under declared A/N definitions — so U≈gNA is expected identity (rel err <5e-3 under float32/chunked scatter), not independent empirical discovery. Investment hinge is behavioral freeze of g*A + D_check thresholds, not the identity alone."
+    },
+    {
+      "id": "F8_FULL_BATCH_EVAL",
+      "severity": "high",
+      "status": "fixed",
+      "detail": "Eval YAML had full_batch_eval=no with LNC num_negative=32, causing ~E/32 full Bellman-Ford passes per query side. Switched to full_batch_eval=yes for LAST_CHANCE eval-only configs; candidate universe unchanged (all entities), only chunking."
+    }
+  ],
+  "not_bugs": [
+    "Checkpoint SHA bindings match AUTHORITATIVE_CHECKPOINT_SHA256.tsv",
+    "SOURCE_RESTORE import root enforced in load_solver",
+    "TEST not used for selection (D_design/D_check from VALID only)",
+    "Overlay does not modify SOURCE_RESTORE on disk"
+  ]
+}

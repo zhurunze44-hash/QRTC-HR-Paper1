@@ -1,0 +1,44 @@
+{
+  "schema": "A1_CONFIG_IDENTITY_FREEZE",
+  "frozen_utc": "20260924T052553Z",
+  "dataset": "PC_KEGG_0602",
+  "setting": "wBRG",
+  "train_contract": {
+    "epochs": 8,
+    "batch_size": 16,
+    "num_negative": 512,
+    "adversarial_temperature": 1.0,
+    "learning_rate": 0.005,
+    "optimizer": "Adam",
+    "smoke_skip_valid": true,
+    "formal_output": "model_epoch_8.pth",
+    "seed_cli": "-s <SEED>",
+    "gpus_cli": "--gpus '[0]'"
+  },
+  "methods": {
+    "BASE": {
+      "historical_name": "Clean NBFNet withBRG",
+      "config_path": "<REDACTED_SERVER_PATH>",
+      "sha256": "4f5c9b1a7b9d66fd8010f75858566d3651c331c4aa6af84a28420a14dab0cb24",
+      "a1_usage": "Reuse YAML content identity; rewrite output_dir per seed under A1 run root; dataset.path must point to frozen DATA_IDENTITY path; seed via CLI not by editing YAML science knobs."
+    },
+    "GATE_ONLY": {
+      "historical_name": "QRTC memory_off / w/o memory ablation",
+      "config_path": "<REDACTED_SERVER_PATH>",
+      "sha256": "bc935101af06fb55b2dc5f2175d7b7046d34bb868a66e6a22096eb60f3737a60",
+      "a1_usage": "Same as BASE regarding output_dir/path/seed rewrite rules."
+    },
+    "RAW_QRTC": {
+      "historical_name": "QRTC-HR fused withBRG formal",
+      "config_path": "<REDACTED_SERVER_PATH>",
+      "sha256": "9a6108a29a9990fbfdaa62ffdf4b33e6938c4d8884a93ab2b63b6114bb93570d",
+      "a1_usage": "Same as BASE regarding output_dir/path/seed rewrite rules."
+    }
+  },
+  "forbidden": [
+    "inventing new hyperparameters",
+    "changing epochs/batch/negatives/lr/architecture fields",
+    "embedding QRTC_* env into YAML instead of launcher env",
+    "mixing configs across methods"
+  ]
+}

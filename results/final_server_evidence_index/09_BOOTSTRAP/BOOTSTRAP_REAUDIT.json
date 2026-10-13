@@ -1,0 +1,21 @@
+{
+  "metric": "delta_mrr_query_sides_head_and_tail",
+  "n_queries": 12876,
+  "note_n": "n=2*n_triples if head+tail expanded",
+  "iterations": 10000,
+  "seed": 20260509,
+  "point_estimate": 0.013720497337287687,
+  "ci_lower": 0.010090925665802207,
+  "ci_upper": 0.01739101046903467,
+  "historical_target_point": 0.01372,
+  "historical_target_ci": [
+    0.00995,
+    0.01742
+  ],
+  "input_path": "<REDACTED_SERVER_PATH>",
+  "input_sha256": "4df00cd43d80e81a48b28361cb5a7201e7ecaf9d98e372aeb3e0895d02198359",
+  "script_sha256": "inline_percentile_bootstrap_this_file",
+  "QUERY_LEVEL_UNCERTAINTY": true,
+  "TRAINING_SEED_UNCERTAINTY": false,
+  "algorithm": "query-side resample with replacement; percentile 2.5/97.5; no algorithm change to chase significance"
+}

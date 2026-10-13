@@ -1,0 +1,35 @@
+output_dir: paper1_q2_sci_package_20260428/pc_kegg_distmult_smoke_seed1024_epoch1
+
+dataset:
+  class: biomedical
+  path: <REDACTED_SERVER_PATH>
+  include_factgraph: yes
+  fact_as_train: yes
+  
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: DistMult
+    embedding_dim: 128
+    l3_regularization: 2.0e-6
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+
+optimizer:
+  class: Adam
+  lr: 1.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 4096
+
+train:
+  num_epoch: 1
+
+  smoke_skip_valid: yes
+metric: mrr

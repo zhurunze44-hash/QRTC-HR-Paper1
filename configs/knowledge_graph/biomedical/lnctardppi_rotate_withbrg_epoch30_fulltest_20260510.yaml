@@ -1,0 +1,45 @@
+# LncTarD-PPI withBRG RotatE epoch30 — full test only (cap-free eval_valid_only.py + EVAL_ONLY_SPLIT=test).
+# Same checkpoint/hparams as lnctardppi_rotate_withbrg_epoch30_fullvalid_20260510.yaml; separate output_dir for eval artifacts.
+
+output_dir: paper1_q2_sci_package_20260428/baseline_rotate_20260510/lnctardppi_withbrg_rotate_epoch30_fulltest_eval_20260510
+
+# Absolute path: eval_valid_only.py chdirs to a fresh working_dir; relative ckpt would break.
+checkpoint: /root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/baseline_rotate_20260510/lnctardppi_withbrg_rotate_formal_seed1024_epoch30/KnowledgeGraphCompletionBiomed/biomedical/RotatE/2026-05-10-17-11-03-934899/model_epoch_30.pth
+
+paper_protocol:
+  symmetric: no
+  note: "symmetric=no for withBRG protocol; RotatE has no symmetric hyperparameter — do not put symmetric under task.model."
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/lnctardppi
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: RotatE
+    embedding_dim: 128
+    max_score: 6
+  criterion: bce
+  num_negative: 64
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 2.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 512
+
+train:
+  num_epoch: 30
+  smoke_skip_valid: yes
+
+metric: mrr

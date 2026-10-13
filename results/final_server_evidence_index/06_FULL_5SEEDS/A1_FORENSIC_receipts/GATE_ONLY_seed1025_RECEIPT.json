@@ -1,0 +1,16 @@
+{
+  "method": "GATE_ONLY",
+  "seed": 1025,
+  "checkpoint": "<REDACTED_SERVER_PATH>",
+  "train_log": "<REDACTED_SERVER_PATH>",
+  "eval_log": "<REDACTED_SERVER_PATH>",
+  "metrics": {
+    "mrr": 0.5472571849822998,
+    "hits@1": 0.452625036239624,
+    "hits@10": 0.7326809763908386,
+    "mr": 124.18453216552734,
+    "ap": 0.9891088604927063,
+    "auroc": 0.9877746105194092
+  },
+  "metrics_source": "<REDACTED_SERVER_PATH>"
+}

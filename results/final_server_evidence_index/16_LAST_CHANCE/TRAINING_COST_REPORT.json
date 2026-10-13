@@ -1,0 +1,10 @@
+{
+  "definition": "1 cell = 1 data context \u00d7 1 method \u00d7 1 seed",
+  "explore_2cell_primary_only": "LNC \u00d7 {RAW, CORRECTED} \u00d7 1 seed = 2 cells (requires BASE already bound)",
+  "historical_T_sec": 14682,
+  "note": "G3 success does NOT set TRAINING_AUTHORIZED. A1 STOP panel cannot offset cells.",
+  "two_task_base_raw_corr_3seed": 18,
+  "two_task_base_raw_corr_5seed": 30,
+  "two_task_raw_corr": 4,
+  "two_task_raw_corr_3seed": 12
+}

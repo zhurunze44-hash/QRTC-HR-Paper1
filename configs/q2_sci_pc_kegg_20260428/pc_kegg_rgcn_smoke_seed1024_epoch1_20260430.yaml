@@ -1,0 +1,47 @@
+output_dir: paper1_q2_sci_package_20260428/pc_kegg_rgcn_smoke_seed1024_epoch1
+
+dataset:
+  class: biomedical
+  path: <REDACTED_SERVER_PATH>
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: NodeEncoder
+    gnn_model:
+      class: BatchedRGCN
+      input_dim: 64
+      hidden_dims: [64, 64]
+      layer_norm: yes
+      short_cut: yes
+      batch_norm: yes
+    score_model:
+      class: RotatEScore
+      embedding_dim: 64
+      max_score: 9
+    flip_edge: yes
+  criterion: bce
+  num_negative: 32
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  conditional_probability: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 5.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 16
+
+train:
+  num_epoch: 1
+  batch_per_epoch: 10
+  smoke_skip_valid: yes
+
+metric: mrr

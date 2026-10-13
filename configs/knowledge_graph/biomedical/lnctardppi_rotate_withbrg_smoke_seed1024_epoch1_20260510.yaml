@@ -1,0 +1,46 @@
+# LncTarD-PPI withBRG RotatE smoke — seed 1024 — epoch 1 — 2026-05-10
+# Source template: config/knowledge_graph/biomedical/lnctardppi_rotate_smoke_20260425.yaml
+# withBRG: same dataset bundle as LncTarD withBRG NBFNet formal (data/lnctardppi, include_factgraph yes).
+# RotatE (torchdrug.models.RotatE) has no `symmetric` constructor arg; NBFNet withBRG formal sets `symmetric: no` under model.
+# Protocol record (not read by Engine): effective asymmetric / withBRG parity — see `paper_protocol` below.
+
+output_dir: paper1_q2_sci_package_20260428/baseline_rotate_20260510/lnctardppi_withbrg_rotate_smoke_seed1024_epoch1
+
+paper_protocol:
+  symmetric: no
+  note: "symmetric=no matches lnctardppi_clean_withbrg_formal; RotatE has no symmetric hyperparameter."
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/lnctardppi
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: RotatE
+    embedding_dim: 128
+    max_score: 6
+  criterion: bce
+  num_negative: 64
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 2.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 512
+
+train:
+  num_epoch: 1
+  batch_per_epoch: 6
+  smoke_skip_valid: yes
+
+metric: mrr

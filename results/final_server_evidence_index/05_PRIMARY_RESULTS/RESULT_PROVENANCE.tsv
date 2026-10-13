@@ -1,0 +1,15 @@
+manuscript_table	row	metric	value	status	raw_eval_output	evaluator	checkpoint	config	code_identity	dataset_split	environment
+II	PC_KEGG_wBRG_Base	MRR	0.536298	BOUND	<REDACTED_SERVER_PATH>	torchdrug filtered ranking / full test	clean_withbrg .../model_epoch_8.pth	pc_kegg clean withbrg formal seed1024	QRTC_ENABLE=0 BioPathNet	PC_KEGG_0602 wBRG test n=6438	biopathnet_py310_torch201@2.8.0+cu128
+II	PC_KEGG_wBRG_QRTC	MRR	0.550018	BOUND	<REDACTED_SERVER_PATH>	eval_test_metrics_only_20260506.py	…/2026-05-05-21-52-47-924760/model_epoch_8.pth sha256=e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0	pc_kegg_qrtc_hronly_fused_withbrg_formal_seed1024_batch16_neg512_epoch8_20260505.yaml	QRTC_MINIMAL_PATCH_V6 MESSAGE_GATED TOPK=2	PC_KEGG_0602 wBRG test n=6438	biopathnet_py310_torch201@2.8.0+cu128
+II	PC_KEGG_wBRG_QRTC	Hits@1	0.460158	BOUND	<REDACTED_SERVER_PATH>	same	same e3fb9d65…	same	same	same	same
+II	PC_KEGG_wBRG_QRTC	Hits@10	0.730429	BOUND	<REDACTED_SERVER_PATH>	same	same	same	same	same	same
+II	PC_KEGG_wBRG_Base	Hits@1	0.440975	BOUND	<REDACTED_SERVER_PATH>	full filtered test	clean_withbrg formal epoch8	clean formal	QRTC_ENABLE=0	PC_KEGG wBRG test	same
+II	PC_KEGG_wBRG_Base	Hits@10	0.724371	BOUND	<REDACTED_SERVER_PATH>	full filtered test	clean_withbrg	clean	QRTC_ENABLE=0	PC_KEGG wBRG test	same
+II	PC_KEGG_woBRG_Base	MRR	0.405033	BOUND	<REDACTED_SERVER_PATH>	full test	clean withoutbrg formal	withoutbrg clean	QRTC_ENABLE=0	PC_KEGG woBRG test	same
+II	PC_KEGG_woBRG_QRTC	MRR	0.419978	BOUND	<REDACTED_SERVER_PATH>	protected re-eval	HIST_MAY02 QRTC authority ckpt	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2	MESSAGE_GATED	PC_KEGG woBRG test	same
+II	LncTarD_wBRG_Base	MRR	0.188326	BOUND	<REDACTED_SERVER_PATH>	full test	clean_withbrg lnctard formal	lnctard clean	QRTC_ENABLE=0	LncTarD-PPI wBRG test n=609	same
+II	LncTarD_wBRG_QRTC	MRR	0.179300	BOUND	<REDACTED_SERVER_PATH>	full test	qrtc_hronly_withbrg lnctard formal	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2	MESSAGE_GATED	LncTarD-PPI wBRG test	same
+II	LncTarD_woBRG_Base	MRR	0.183579	BOUND	<REDACTED_SERVER_PATH>	full test	clean withoutbrg lnctard	clean	QRTC_ENABLE=0	LncTarD woBRG test	same
+II	LncTarD_woBRG_QRTC	MRR	0.184451	BOUND	<REDACTED_SERVER_PATH>	full test	qrtc withoutbrg lnctard formal	QRTC formal	MESSAGE_GATED	LncTarD woBRG test	same
+III	PC_KEGG_wBRG_memory_off	MRR	0.540014	BOUND	<REDACTED_SERVER_PATH>	full test	pc_kegg_withbrg_qrtc_memory_off_seed1024_epoch8/.../model_epoch_8.pth	QRTC_ENABLE=1 QRTC_USE_MEMORY=0 TOPK=2	MESSAGE_GATED memory_off	PC_KEGG wBRG test	same
+III	PC_KEGG_wBRG_RotatE	MRR	0.273014	BOUND	<REDACTED_SERVER_PATH>	RotatE eval	RotatE epoch30 seed1024	RotatE baseline	RotatE	PC_KEGG wBRG	same

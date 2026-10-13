@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-03T03:45:00Z",
+  "scope": "Continue unfinished independent re-audit: design soundness, code defects, stale/mis-run artifacts, complete scientific re-run",
+  "canonical_source_modified": false,
+  "state_found_at_resume": {
+    "code_repairs_present": [
+      "R1-R6 from AUDIT_REPAIR_20261003",
+      "F1-F8 from AUDIT_FIXES_20261003"
+    ],
+    "scientific_re_run": "FAILED mid-G2 with BrokenPipeError in _tick print; PIPELINE_STATUS=NOT_RUN",
+    "live_G2_G3_decision": "STALE pre-repair SELECTED freeze with design_delta_mrr=-0.0078 and reason label claiming +0.002 \u2014 INVALID",
+    "live_G1": "partial post-repair numbers present but signal_gate not persisted to G1_SUMMARY.json"
+  },
+  "new_defects_fixed_this_pass": [
+    {
+      "id": "R7_TICK_BROKENPIPE_ABORTS_RUN",
+      "severity": "critical",
+      "status": "fixed",
+      "detail": "_tick used bare print(..., flush=True); under captured/redirected stdout BrokenPipe aborted the repaired re-run after G1, leaving invalid SELECTED freeze on disk. Now _safe_print + stdout/stderr flush guards."
+    },
+    {
+      "id": "R8_G1_SIGNAL_GATE_NOT_PERSISTED",
+      "severity": "medium",
+      "status": "fixed",
+      "detail": "G1_SUMMARY.json was dumped before signal_gate was attached, so disk never recorded the gate verdict. Dump moved after gate computation."
+    },
+    {
+      "id": "R9_OVERLAY_STATS_CROSS_MODE_POLLUTION",
+      "severity": "low",
+      "status": "fixed",
+      "detail": "clear_trace left identity_control/correct_ga keys (id_* / scale_match) visible on subsequent noop receipts. clear_trace now resets _STATS fully."
+    },
+    {
+      "id": "R10_STALE_SELECTED_UNDER_FAILED_RERUN",
+      "severity": "critical",
+      "status": "quarantined",
+      "detail": "Copied invalid SELECTED/G3/decision/failed PIPELINE_STATUS to receipts/_QUARANTINE_STALE_MIXED_20261003T1200; cleared live G3; live G2 will be rewritten by clean re-run."
+    }
+  ],
+  "design_line_verdict": {
+    "gpt_line_had_structural_flaws": true,
+    "flaws": [
+      "U\u2248gNA on DistMult fused path is near-identity under declared A/N definitions \u2014 not independent empirical discovery",
+      "Prior abs(\u0394MRR) freeze allowed a harmful intervention to unlock G3 (mis-run; G3 under that freeze is not evidence against the hypothesis)",
+      "Literal unscaled g*A confounds TopK reordering with attention scale OOD (~mean N shrinkage)",
+      "G1 frac_drop-alone gate treated rank churn as investment signal"
+    ],
+    "still_scientifically_answerable_after_repair": "Yes: does scale-matched g*A improve D_design MRR in repair direction with N static? If no \u2192 NOT_SELECTED / NO_INVESTMENT_SIGNAL without opening D_check."
+  },
+  "not_bugs_reconfirmed": [
+    "Checkpoint SHAs LIVE_MATCH AUTHORITATIVE_CHECKPOINT_SHA256.tsv for PC/LNC BASE+RAW",
+    "DESIGN_CHECK design\u2229check empty; TEST not in split meta",
+    "SOURCE_RESTORE model.py mode 0444; overlay-only patches",
+    "Rank formula matches filtered ranking (pos<=pred)&mask"
+  ],
+  "completion": {
+    "utc": "2026-10-03T03:55:00Z",
+    "scientific_re_run": "COMPLETE",
+    "runtime_status": "NO_INVESTMENT_SIGNAL",
+    "closeout": "receipts/AUDIT_CLOSEOUT_FINAL_20261003.json",
+    "g3": "05_G3_CORRECTED/G3_SUMMARY.json status=SKIPPED_NOT_SELECTED",
+    "extra_fix": "R11_G3_SKIP_MARKER_ON_NOT_SELECTED"
+  }
+}

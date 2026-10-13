@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-15T06:35:00Z",
+  "policy": "prefer_evaluator_replay_no_retrain",
+  "primary_checkpoint": {
+    "path": "<REDACTED_SERVER_PATH>",
+    "sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0",
+    "sha256_live_verify": "PASS"
+  },
+  "historical_eval": {
+    "log": "<REDACTED_SERVER_PATH>",
+    "evaluator": "eval_test_metrics_only_20260506.py",
+    "split": "PC_KEGG_0602 test n=6438",
+    "metrics": {
+      "ap": 0.986643,
+      "auroc": 0.985724,
+      "hits@1": 0.460158,
+      "hits@10": 0.730429,
+      "mr": 126.234,
+      "mrr": 0.550018
+    },
+    "match_published_table_II": "PASS_EXACT"
+  },
+  "live_gpu_replay_this_host": {
+    "status": "WHY_NOT_EXECUTABLE",
+    "reason": "Formal conda env biopathnet_py310_torch201 with PyTorch 2.8.0+cu128 / TorchDrug formal rspmm stack is ABSENT on this host. Local biopathnet_py310_smoke provides torch 2.0.1+cu118 + torchdrug 0.2.1, which is the incompatible pre-upgrade attempt lineage and is NOT the Table-binding runtime; substituting it would violate same-formal-config replay.",
+    "gpu_probe_smoke": "RTX4090 sm_89 cuda_tensor_ok under 2.0.1 — still wrong stack for scientific replay"
+  },
+  "sufficiency_ruling": "HISTORICAL_EVAL_LOG_PLUS_CHECKPOINT_SHA_BINDING_SUFFICIENT_FOR_TABLE_CELLS; LIVE_REPLAY_DOCUMENTED_NOT_SKIPPED"
+}

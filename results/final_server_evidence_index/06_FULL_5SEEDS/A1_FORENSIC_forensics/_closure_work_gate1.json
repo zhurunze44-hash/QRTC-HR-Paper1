@@ -1,0 +1,131 @@
+{
+  "competitors": [
+    {
+      "path": "<REDACTED_SERVER_PATH>",
+      "role": "OTHER",
+      "has_model_py": true,
+      "model_sha16": "2cb1e5765a271ae5",
+      "mtime": "2026-09-08T20:03:49"
+    },
+    {
+      "path": "<REDACTED_SERVER_PATH>",
+      "role": "WORK_FORBIDDEN",
+      "has_model_py": true,
+      "model_sha16": "a9ab3e73ba27eeab",
+      "mtime": "2026-09-08T21:49:10"
+    },
+    {
+      "path": "<REDACTED_SERVER_PATH>",
+      "role": "AUTHORITY",
+      "has_model_py": true,
+      "model_sha16": "2cb1e5765a271ae5",
+      "mtime": "2026-09-08T21:33:58"
+    },
+    {
+      "path": "<REDACTED_SERVER_PATH>",
+      "role": "OTHER",
+      "has_model_py": true,
+      "model_sha16": "2cb1e5765a271ae5",
+      "mtime": "2026-09-08T21:33:58"
+    }
+  ],
+  "editables": [
+    {
+      "path": "<REDACTED_SERVER_PATH>",
+      "size": 151
+    }
+  ],
+  "pythonpath_hints": [],
+  "precedence": {
+    "cold_launcher_exec": "python SOURCE_RESTORE/script/run.py",
+    "sys_path_0_at_start": "<REDACTED_SERVER_PATH>",
+    "after_append": [
+      "<REDACTED_SERVER_PATH>",
+      "...site...",
+      "<REDACTED_SERVER_PATH>"
+    ],
+    "note": "append puts SOURCE_RESTORE at END; earlier entries win. site-packages has NO biopathnet package now. cwd after chdir is unique timestamp workdir under runs/ \u2014 unlikely to contain biopathnet package.",
+    "run_py_line": "sys.path.append(os.path.dirname(os.path.dirname(__file__)))"
+  },
+  "cell_rows": [
+    {
+      "cell": "BASE_seed1024",
+      "winning_workdir": "2026-09-25-14-00-58-001915",
+      "traceback_biopath_modules_SOURCE_RESTORE": "",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 0,
+      "n_File_traceback_lines": 0,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "PARTIALLY_BOUND__SOURCE_RESTORE_STRONGLY_SUPPORTED",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    },
+    {
+      "cell": "GATE_ONLY_seed1024",
+      "winning_workdir": "2026-09-25-21-53-35-566750",
+      "traceback_biopath_modules_SOURCE_RESTORE": "layer.py;model.py;qrtc_common.py;task.py",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 3,
+      "n_File_traceback_lines": 37,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "CONFLICTING_SOURCE_POSSIBLE",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    },
+    {
+      "cell": "RAW_QRTC_seed1024",
+      "winning_workdir": "2026-09-27-04-47-10-225368",
+      "traceback_biopath_modules_SOURCE_RESTORE": "layer.py;model.py;qrtc_common.py;task.py",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 8,
+      "n_File_traceback_lines": 475,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "CONFLICTING_SOURCE_POSSIBLE",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    },
+    {
+      "cell": "BASE_seed1025",
+      "winning_workdir": "2026-09-27-21-25-15-144502",
+      "traceback_biopath_modules_SOURCE_RESTORE": "layer.py;model.py;task.py",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 4,
+      "n_File_traceback_lines": 37,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "CONFLICTING_SOURCE_POSSIBLE",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    },
+    {
+      "cell": "GATE_ONLY_seed1025",
+      "winning_workdir": "2026-09-28-08-02-44-597094",
+      "traceback_biopath_modules_SOURCE_RESTORE": "layer.py;model.py;qrtc_common.py;task.py",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 3,
+      "n_File_traceback_lines": 93,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "CONFLICTING_SOURCE_POSSIBLE",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    },
+    {
+      "cell": "RAW_QRTC_seed1025",
+      "winning_workdir": "2026-09-29-09-52-34-101837",
+      "traceback_biopath_modules_SOURCE_RESTORE": "layer.py;model.py;qrtc_common.py;task.py",
+      "traceback_WORK_or_worktree_count": 0,
+      "traceback_site_biopathnet_count": 3,
+      "n_File_traceback_lines": 93,
+      "quiet_success_module_file_receipt": false,
+      "launcher_exec_absolute_SOURCE_RESTORE_run_py": true,
+      "ACTUAL_RUNTIME_SOURCE_PROVENANCE": "CONFLICTING_SOURCE_POSSIBLE",
+      "notes": "Stacks may include OOM siblings in same train.log; quiet winning lineage has no module.__file__ dump"
+    }
+  ],
+  "authority_sha_now": {
+    "model.py": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+    "layer.py": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657",
+    "qrtc_common.py": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f",
+    "task.py": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc",
+    "util.py": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7"
+  }
+}

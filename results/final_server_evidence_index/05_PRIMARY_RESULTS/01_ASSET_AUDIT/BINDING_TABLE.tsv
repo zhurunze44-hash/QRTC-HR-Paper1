@@ -1,0 +1,9 @@
+paper_scalar	split_setting	value	bound_asset	checkpoint_or_note	qrtc_env_contract	implementation_class
+PC_KEGG_wBRG_Clean_MRR	test	0.536298	CLEAN_VS_QRTC_HR_FULL_VALID_TEST_MAIN_TABLE_20260507.md; full_pipeline_20260507.log	clean_withbrg .../model_epoch_8.pth	QRTC_ENABLE=0	BioPathNet_clean
+PC_KEGG_wBRG_QRTC_MRR	test	0.550018	QRTC_HRONLY_FUSED_WITHBRG_FULL_TEST_METRICS_SUMMARY_20260506.md; formal_epoch8_full_test_metrics_only log	qrtc_hronly_fused_withbrg.../2026-05-05-21-52-47-924760/model_epoch_8.pth sha256=e3fb9d65...	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2 CAND_READOUT=0 FORCE_MESSAGE=0	MESSAGE_GATED_QRTC
+PC_KEGG_woBRG_Clean_MRR	test	0.405033	WITHOUTBRG_CLEAN_FULL_TEST_STATUS; dump_clean_meta.json	clean withoutbrg formal ckpt	QRTC_ENABLE=0	BioPathNet_clean
+PC_KEGG_woBRG_QRTC_MRR	test	0.419978	hist_may02_qrtc_protected_full_test_arbitration_20260508.log	HIST_MAY02 QRTC ckpt (authority)	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2	MESSAGE_GATED_QRTC
+LncTarD_wBRG_Clean_MRR	test	0.188326	LNCTARDPPI_WITHBRG_QRTC_HR_FULL_CLOSURE_SUMMARY_20260509.md	clean_withbrg lnctard formal	QRTC_ENABLE=0	BioPathNet_clean
+LncTarD_wBRG_QRTC_MRR	test	0.179300	same closure + PAPER1_MAIN_RESULTS_TABLE_FINAL	qrtc_hronly_withbrg lnctard formal	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2	MESSAGE_GATED_QRTC
+LncTarD_woBRG_Clean_MRR	test	0.183579	LNCTARDPPI_WITHOUTBRG closure / final TSV	clean withoutbrg lnctard	QRTC_ENABLE=0	BioPathNet_clean
+LncTarD_woBRG_QRTC_MRR	test	0.184451	same	qrtc withoutbrg lnctard formal	QRTC_ENABLE=1 USE_MEMORY=1 TOPK=2	MESSAGE_GATED_QRTC

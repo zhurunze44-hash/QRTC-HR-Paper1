@@ -1,0 +1,52 @@
+{
+  "schema": "A0_FORMAL_CHECKPOINT_REPLAY_TOLERANCE_FREEZE",
+  "frozen_before_outcomes": true,
+  "frozen_utc": "20260924T054500Z",
+  "new_formal_training_runs": 0,
+  "optimizer_step": 0,
+  "epoch_loop": 0,
+  "primary_checkpoint": {
+    "method": "RAW_QRTC",
+    "path": "<REDACTED_SERVER_PATH>",
+    "sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0"
+  },
+  "historical_receipt_metrics": {
+    "ap": 0.986643,
+    "auroc": 0.985724,
+    "hits@1": 0.460158,
+    "hits@10": 0.730429,
+    "mr": 126.234,
+    "mrr": 0.550018
+  },
+  "also_replay_if_time": [
+    {
+      "method": "BASE",
+      "sha256": "8a66e860f4740e9e21628c3449d006452d6386c686d3d6a227c163c99fb45b68",
+      "mrr": 0.536298,
+      "hits@1": 0.440975,
+      "hits@10": 0.724371
+    },
+    {
+      "method": "GATE_ONLY",
+      "sha256": "90ba86fc6aa63153dfd58e16698937450285251d1a6ce3f659e4a119780c6cd1",
+      "mrr": 0.540014,
+      "hits@1": 0.448820,
+      "hits@10": 0.725691
+    }
+  ],
+  "tolerances_fixed_pre_outcome": {
+    "mrr_abs": 1.0e-5,
+    "hits_abs": 1.0e-5,
+    "ap_abs": 1.0e-5,
+    "auroc_abs": 1.0e-5,
+    "mr_abs": 1.0e-2,
+    "note": "GPU float nondeterminism budget; do NOT widen after seeing outcomes"
+  },
+  "pass_rule": "ABS(live - historical) <= tol for every listed metric; else FAIL_REPLAY",
+  "fail_closed_if": [
+    "wrong_torch_stack",
+    "import_not_SOURCE_RESTORE",
+    "QRTC_TOPK!=2 for RAW_QRTC",
+    "optimizer_step>0"
+  ]
+}

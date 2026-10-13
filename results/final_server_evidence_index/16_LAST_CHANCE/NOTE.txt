@@ -1,0 +1,1 @@
+Quarantined stale SELECTED freeze (negative design ΔMRR) + G3 under invalid freeze + failed re-run PIPELINE_STATUS. Awaiting clean re-run under repaired selection (positive Δ only + scale-matched g*A).

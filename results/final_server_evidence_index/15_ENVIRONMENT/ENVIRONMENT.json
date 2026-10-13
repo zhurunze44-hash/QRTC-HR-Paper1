@@ -1,0 +1,17 @@
+{
+  "hostname": "nux208-Precision-3680",
+  "os": "Linux-6.11.0-17-generic-x86_64-with-glibc2.39",
+  "kernel": "6.11.0-17-generic",
+  "cpu_cores": 32,
+  "python": "3.10.20 | packaged by conda-forge | (main, Mar  5 2026, 16:42:22) [GCC 14.3.0]",
+  "executable": "<REDACTED_SERVER_PATH>",
+  "torch": "2.0.1+cu118",
+  "torch_cuda": "11.8",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torchdrug": "0.2.1",
+  "formal_env_biopathnet_py310_torch201_present": false,
+  "formal_stack_target": "PyTorch 2.8.0+cu128 / TorchDrug 0.2.1 / Python 3.10 (ABSENT)",
+  "audit_env_used": "biopathnet_py310_smoke \u2014 tensor-only A0; NOT formal Table replay stack",
+  "ram_gb": 125.5
+}

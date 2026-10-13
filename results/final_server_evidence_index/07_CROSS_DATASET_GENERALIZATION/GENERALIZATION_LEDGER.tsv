@@ -1,0 +1,5 @@
+experiment_id	dataset	biomedical_task	method	seed	training_dataset	evaluation_dataset	same_schema_or_transfer	config_path	checkpoint_path	metric	base_value	qrtc_value	delta	evidence_status	notes
+PC_wBRG_s1024	PC_KEGG	pathway_completion	Base_vs_QRTC	1024	PC_KEGG	PC_KEGG	same_dataset_wBRG_regime			MRR	0.536298	0.550018	0.013719999999999954	FORMAL	primary table
+PC_woBRG_s1024	PC_KEGG	pathway_completion	Base_vs_QRTC	1024	PC_KEGG	PC_KEGG	same_dataset_woBRG_regime		May02_QRTC_ckpt_MISSING	MRR	0.405033	0.419978	0.014945000000000042	FORMAL_AGGREGATE_PROTECTED_REEVAL	not independent dataset
+Lnc_wBRG_s1024	LncTarD-PPI	lncRNA_target	Base_vs_QRTC	1024	LncTarD	LncTarD	independent_biomedical_dataset			MRR	0.188326	0.179300	-0.009026000000000006	FORMAL	mixed/negative on MRR and Hits@1
+Lnc_woBRG_s1024	LncTarD-PPI	lncRNA_target	Base_vs_QRTC	1024	LncTarD	LncTarD	same_dataset_woBRG_regime			MRR	0.183579	0.184451	0.0008720000000000117	FORMAL	tiny positive MRR; Hits mixed

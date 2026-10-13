@@ -1,0 +1,63 @@
+{
+  "schema": "PAPER1_RESULT_PROVENANCE_FINAL",
+  "utc": "2026-09-08T15:42:00Z",
+  "frozen": true,
+  "submission_pdf": {
+    "path": "00_submission_authority/QRTC_HR_SUBMITTED_MANUSCRIPT.pdf",
+    "sha256": "c568124e9b6ce72c596f2a06610763d855fe34335634c34b6ebd906073417993",
+    "SUBMISSION_PDF_LOCAL_BINDING": "PASS"
+  },
+  "PAPER1_RESULT_PROVENANCE": "PASS__TABLE_RESULTS_BOUND",
+  "PAPER1_CLAIM_AUDIT": "CASE_B__HARD_READOUT_ONLY_CLAIM_CONFIRMED",
+  "PAPER1_IMPLEMENTATION": {
+    "patch": "QRTC_MINIMAL_PATCH_V6",
+    "mechanism": "MESSAGE_GATED_RELATION_CONDITIONED_REASONING",
+    "QRTC_TOPK": 2,
+    "formal_env": {
+      "QRTC_ENABLE": "1",
+      "QRTC_USE_MEMORY": "1",
+      "QRTC_TOPK": "2",
+      "QRTC_CAND_READOUT_ENABLE": "0_or_unset",
+      "QRTC_FORCE_MESSAGE_PATH": "0"
+    }
+  },
+  "PAPER1_MANUSCRIPT_IMPLEMENTATION_CONSISTENCY": "FAIL__SUBSTANTIVE_MISMATCH",
+  "PAPER1_ENVIRONMENT_CONSISTENCY": "FAIL__MANUSCRIPT_ENVIRONMENT_MISMATCH",
+  "PAPER1_ENVIRONMENT_PROVENANCE": "FAIL__MANUSCRIPT_ENVIRONMENT_MISMATCH",
+  "READOUT_ONLY_IMPLEMENTATION_WITH_MATCHING_TABLE_RESULTS": "NOT_FOUND",
+  "legacy_method_verdict": "FAIL__PAPER1_RESULTS_BOUND_TO_MESSAGE_GATED_IMPLEMENTATION",
+  "hold_revoked": true,
+  "fabrication_allegation": "NOT_SUPPORTED__DO_NOT_ESCALATE",
+  "environment": {
+    "manuscript": {
+      "python": "3.10.20",
+      "pytorch": "2.8.0",
+      "cuda": "12.8",
+      "torchdrug": "0.2.1"
+    },
+    "observed_formal_runs": {
+      "conda_env": "biopathnet_py310_torch201",
+      "pytorch_lineage": "2.0.1"
+    },
+    "note": "Environment FAIL is independent of Table result binding PASS"
+  },
+  "two_objects": {
+    "manuscript_QRTC_HR": "fixed_propagation_plus_post_propagation_TopL_readout_plus_residual",
+    "empirical_QRTC": "relation_gate_inside_message_passing_plus_memory_state_plus_hop_routing"
+  },
+  "reconciliation_policy": {
+    "preferred": "PATH_A__REVISE_MANUSCRIPT_TO_MATCH_IMPLEMENTATION",
+    "alternative": "PATH_B__IMPLEMENT_READOUT_ONLY_AND_RERUN_TABLES",
+    "forbidden": "REWRITE_CODE_TO_MATCH_OLD_MANUSCRIPT_NARRATIVE"
+  },
+  "runtime_opt": {
+    "QRTC_RUNTIME_OPT2": "PAUSED__CASE_B_METHOD_MISMATCH",
+    "OPT3_OPT4": "NOT_AUTHORIZED_UNDER_CASE_B"
+  },
+  "pair_kg": {
+    "NBFNet": "AUTHORIZED",
+    "BioPathNet": "AUTHORIZED",
+    "QRTC_HR_PAIRKG_IDENTITY": "HOLD__PENDING_PAPER1_METHOD_RECONCILIATION"
+  },
+  "prior_audit": "03_PAPER1_RESULT_PROVENANCE_AUDIT/"
+}

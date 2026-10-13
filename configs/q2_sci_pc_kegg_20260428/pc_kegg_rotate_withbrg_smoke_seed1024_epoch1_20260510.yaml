@@ -1,0 +1,38 @@
+# PC_KEGG withBRG RotatE smoke (epoch 1) — path-normalized for autodl host — 2026-05-10
+# Not for formal paper tables; wiring check only.
+
+output_dir: paper1_q2_sci_package_20260428/baseline_rotate_20260510/pc_kegg_withbrg_rotate_smoke_seed1024_epoch1
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602
+  include_factgraph: yes
+  fact_as_train: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: RotatE
+    embedding_dim: 128
+    max_score: 6
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+
+optimizer:
+  class: Adam
+  lr: 2.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 4096
+
+train:
+  num_epoch: 1
+
+  smoke_skip_valid: yes
+metric: mrr

@@ -1,0 +1,22 @@
+patch,semantic_class,applies_to_pre6_cells,applies_to_future_cells,note,current_script_sha_lock
+panel_flock_singleton,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,prevents dual drivers; does not change train math,see HARNESS_HASH_LOCK.txt
+guardian_flock_singleton,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,singleton guardian,see HARNESS_HASH_LOCK.txt
+wait_existing_train_stall_only,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,removes false FATAL; does not change train math,see HARNESS_HASH_LOCK.txt
+pre_eval_wait_stall_only,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,same,see HARNESS_HASH_LOCK.txt
+logc_stdout_only,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,logging only,see HARNESS_HASH_LOCK.txt
+gpu_occupancy_gate,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,when/whether train starts; not forward math,see HARNESS_HASH_LOCK.txt
+guardian_flock_FD7_probe_fix,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,recovery only,see HARNESS_HASH_LOCK.txt
+guardian_skip_bounce_GPU_WAIT,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,recovery only,see HARNESS_HASH_LOCK.txt
+shim_sys_path_scrub,SCIENCE_AFFECTING_IF_AMBIENT_CONTAMINATED,NO_code_after_fact,YES_if_panel_resumed_under_V2,"CAN change imported biopathnet if ambient PYTHONPATH had alternate tree; for completed cold starts, run.py already appends SOURCE_RESTORE parent — residual risk if earlier path entry shadowed",see HARNESS_HASH_LOCK.txt
+shim_hash_lock,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,provenance gate,see HARNESS_HASH_LOCK.txt
+extract_cell_scoped_json,SCIENCE_AFFECTING_IF_OLD_RECEIPTS_POISONED,NO_code_after_fact,YES_if_panel_resumed_under_V2,can change extracted metrics; audited: all 6 receipts metrics_source already cell-scoped PASS,see HARNESS_HASH_LOCK.txt
+pgrep_tighten,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,process matching,see HARNESS_HASH_LOCK.txt
+eval_gpu_gate,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,when eval starts,see HARNESS_HASH_LOCK.txt
+waiter_glog_dedup,OPERATIONAL_ONLY,NO_code_after_fact,YES_if_panel_resumed_under_V2,logging,see HARNESS_HASH_LOCK.txt
+CELL::BASE_seed1024,pre_V2,THIS_CELL,N/A,trained 2026-09-25; mode=cold_launcher; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::GATE_ONLY_seed1024,pre_V2,THIS_CELL,N/A,trained 2026-09-25/26; mode=cold_then_waiter_recovery; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::RAW_QRTC_seed1024,pre_V2,THIS_CELL,N/A,trained 2026-09-27; mode=cold_after_28_OOM; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::BASE_seed1025,pre_V2,THIS_CELL,N/A,trained 2026-09-27/28; mode=cold_with_A1_RESUME_markers_in_log; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::GATE_ONLY_seed1025,pre_V2,THIS_CELL,N/A,trained 2026-09-28; mode=A1_RESUME_present; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::RAW_QRTC_seed1025,pre_V2,THIS_CELL,N/A,trained 2026-09-29; mode=A1_RESUME_present; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven
+CELL::BASE_seed1026,pre_V2,THIS_CELL,N/A,trained 2026-09-30; mode=interrupted_host_reboot_ep3; current V2 scripts mtime 2026-10-02 AFTER this cell,NOT_EQUAL_to_runtime_unless_proven

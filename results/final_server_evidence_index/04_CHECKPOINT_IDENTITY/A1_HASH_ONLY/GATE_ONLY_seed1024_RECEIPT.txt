@@ -1,0 +1,4 @@
+absolute_path=<REDACTED_SERVER_PATH>
+size=111146055
+mtime=2026-09-25T18:57:43Z
+sha256=db05fc469fd2ff3cab6473521a520db2811d6ef2fc4ed7ce7883de687836eced

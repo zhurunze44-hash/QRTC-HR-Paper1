@@ -1,0 +1,22 @@
+{
+  "n_valid_seeds": 0,
+  "n_valid_seeds_definition": "completed formal Paper1 Base vs QRTC 5-seed panel with eligible provenance",
+  "formal_seed1024_delta_mrr": 0.013719999999999954,
+  "mean Base MRR": null,
+  "std Base MRR": null,
+  "mean QRTC MRR": null,
+  "std QRTC MRR": null,
+  "mean Delta MRR": null,
+  "std Delta MRR": null,
+  "median Delta MRR": null,
+  "min Delta MRR": null,
+  "max Delta MRR": null,
+  "n_positive_MRR": null,
+  "n_negative_MRR": null,
+  "A1_forensic_note": "A1 has BASE+RAW for seeds 1024 and 1025 only; panel STOPPED for provenance; MUST NOT be treated as formal 5-seed",
+  "A1_forensic_deltas_mrr": {
+    "1024": -0.35035595297813416,
+    "1025": -0.003607809543609619
+  },
+  "metrics_also": "no complete 5-seed statistics for Hits@1/Hits@10/MR/AP/AUROC"
+}

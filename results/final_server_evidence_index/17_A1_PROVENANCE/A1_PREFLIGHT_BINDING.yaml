@@ -1,0 +1,70 @@
+schema: PAPER1_FEEDBACK_STATE_A1_PREFLIGHT_BINDING
+name: PAPER1_FEEDBACK_STATE_A1_PREFLIGHT_BINDING_V1
+frozen: true
+frozen_utc: "20260924T052553Z"
+
+authority:
+  A0_EXECUTION: PASS
+  A0_SCOPE_DISCIPLINE: PASS
+  A0_RETURN_BUNDLE_INTEGRITY: PASS_WITH_MINOR_PACKAGING_DEFECT
+  A0_FACTORIZATION_EVIDENCE_GRADE: B
+  A0_FORMAL_CHECKPOINT_REPLAY: NOT_EXECUTED__FORMAL_STACK_ABSENT
+  A0_INDEPENDENT_REVIEW: PASS__WITH_RECORDED_CAVEATS
+  A1_PROTOCOL_SCIENTIFIC_INTENT: ACCEPTED
+  A1_EXECUTION_READY: false
+  A1_AUTHORIZED: false
+  NEXT: STOP__AWAIT_INDEPENDENT_REVIEW_OF_A1_PREFLIGHT
+  NEW_FORMAL_TRAINING_RUNS: 0
+
+a0_seal:
+  path: <REDACTED_SERVER_PATH>
+  sha256: ca683b981b8cecb641e437b14a2822f9b0e93cc08933e6a4c51a4754e004b58c
+  reseal_required: false
+  modify_allowed: false
+
+preflight_deliverables:
+  - INDEPENDENT_REVIEW_CAVEATS.md
+  - A0_SEAL_PRESERVATION.md
+  - SOURCE_IDENTITY_FREEZE.json
+  - CONFIG_IDENTITY_FREEZE.json
+  - DATA_IDENTITY_FREEZE.json
+  - EVALUATOR_IDENTITY_FREEZE.json
+  - METHOD_LAUNCHER_ENV_CONTRACT.yaml
+  - EXECUTION_ENVIRONMENT_BINDING.md
+  - A1_STATISTICAL_ANALYSIS_AND_ADJUDICATION_RULE.yaml
+  - A3_IMPLEMENTATION_BLOCKER.md
+  - launchers/*.sh.template
+
+panel_contract:
+  methods: [BASE, GATE_ONLY, RAW_QRTC]
+  seeds: [1024, 1025, 1026, 1027, 1028]
+  n_runs: 15
+  historical_seed1024: REPRODUCTION_REFERENCE_ONLY
+  single_formal_environment_required: true
+
+environment:
+  target_conda: biopathnet_py310_torch201
+  target_torch: 2.8.0+cu128
+  target_torchdrug: "0.2.1"
+  currently_present_on_host: false
+  smoke_env_authorized_for_a1: false
+
+critical_bindings:
+  RAW_QRTC.QRTC_TOPK: "2"
+  GATE_ONLY.QRTC_TOPK: "2"
+  GATE_ONLY.QRTC_USE_MEMORY: "0"
+  RAW_QRTC.QRTC_USE_MEMORY: "1"
+  BASE.QRTC_ENABLE: "0"
+  all.QRTC_DIAGNOSTIC_LOG: "0"
+  all.QRTC_FEEDBACK_STATE_MODE: canonical_raw
+  all.QRTC_CAND_READOUT_ENABLE: "0"
+
+primary_analysis:
+  contrast: MRR(RAW_QRTC) - MRR(BASE) paired by seed
+  aggregates: mean + sample_sd + fixed_t95_ci_df4
+  proceed_rules: see A1_STATISTICAL_ANALYSIS_AND_ADJUDICATION_RULE.yaml
+
+a3_blocker_recorded: true
+training_executed: false
+
+final_status: PASS__A1_PREFLIGHT_BOUND__AWAITING_INDEPENDENT_REVIEW__A1_AUTHORIZED_FALSE

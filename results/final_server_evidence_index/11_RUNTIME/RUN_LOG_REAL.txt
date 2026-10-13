@@ -1,0 +1,47 @@
+loading real PC-KEGG...
+<REDACTED_SERVER_PATH> UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging  # type: ignore[attr-defined]
+Loading <REDACTED_SERVER_PATH>   0%|          | 0/1884146 [00:00<?, ?it/s]Loading <REDACTED_SERVER_PATH>  12%|█▏        | 218007/1884146 [00:00<00:00, 2180025.30it/s]Loading <REDACTED_SERVER_PATH>  24%|██▍       | 453006/1884146 [00:00<00:00, 2279979.39it/s]Loading <REDACTED_SERVER_PATH>  37%|███▋      | 689112/1884146 [00:00<00:00, 2316980.42it/s]Loading <REDACTED_SERVER_PATH>  49%|████▉     | 920811/1884146 [00:00<00:00, 2314976.09it/s]Loading <REDACTED_SERVER_PATH>  61%|██████    | 1152309/1884146 [00:00<00:00, 2306495.73it/s]Loading <REDACTED_SERVER_PATH>  74%|███████▎  | 1387397/1884146 [00:00<00:00, 2321526.27it/s]Loading <REDACTED_SERVER_PATH>  86%|████████▌ | 1622925/1884146 [00:00<00:00, 2332522.93it/s]Loading <REDACTED_SERVER_PATH>  99%|█████████▊| 1859111/1884146 [00:00<00:00, 2341836.90it/s]Loading <REDACTED_SERVER_PATH> 100%|██████████| 1884146/1884146 [00:00<00:00, 2320737.21it/s]
+Loading <REDACTED_SERVER_PATH>   0%|          | 0/22702 [00:00<?, ?it/s]Loading <REDACTED_SERVER_PATH> 100%|██████████| 22702/22702 [00:00<00:00, 2359127.13it/s]
+Loading <REDACTED_SERVER_PATH>   0%|          | 0/3227 [00:00<?, ?it/s]Loading <REDACTED_SERVER_PATH> 100%|██████████| 3227/3227 [00:00<00:00, 2293682.26it/s]
+Loading <REDACTED_SERVER_PATH>   0%|          | 0/6438 [00:00<?, ?it/s]Loading <REDACTED_SERVER_PATH> 100%|██████████| 6438/6438 [00:00<00:00, 2302825.27it/s]
+freeze {"num_node": 31410, "num_relation": 14, "fact_graph_num_edge": 1906848, "batch_size": 2}
+real mode A
+  done mode A median=137.97ms
+real mode B
+  done mode B median=138.12ms
+real mode C
+  done mode C median=138.36ms
+real mode D
+  done mode D median=203.47ms
+STAGE:2026-09-08 22:26:05 73852:73852 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2026-09-08 22:26:05 73852:73852 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2026-09-08 22:26:05 73852:73852 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+STAGE:2026-09-08 22:26:06 73852:73852 ActivityProfilerController.cpp:311] Completed Stage: Warm Up
+STAGE:2026-09-08 22:26:07 73852:73852 ActivityProfilerController.cpp:317] Completed Stage: Collection
+STAGE:2026-09-08 22:26:07 73852:73852 ActivityProfilerController.cpp:321] Completed Stage: Post Processing
+FINAL_STATUS PASS__QRTC_RUNTIME_ROOT_CAUSE__ALGORITHM_DOMINANT
+CUDA_ENV NVIDIA GeForce RTX 4090 2.0.1+cu118 11.8
+BIOPATHNET_MEDIAN_MS 138.1185384998389
+QRTC_OFF_MEDIAN_MS 138.35711249976157
+QRTC_ON_MEDIAN_MS 203.46653950036853
+R_WRAPPER 1.001727313382504
+R_QRTC 1.4705896634025168
+R_TOTAL 1.473129832608284
+BIOPATHNET_PEAK_MB 526.873046875
+QRTC_ON_PEAK_MB 529.55078125
+MESSAGE_CALL_RATIO both_zero_fused_path
+PROPAGATION_CALL_RATIO 1.0
+TOP_5_ROOT_CAUSES accumulate_qrtc_rel_usage_chunked rematerializes DistMult edge messages in Python chunks (measured calls == #layers) | compute_qrtc_relation_gate expands R×B×d and runs gate MLP each layer | unconditional precedent topk_ids/weights .detach().cpu() sync in _qrtc_prepare_layer_state | R_wrapper=1.0017 (QRTC-off ≈ BioPathNet; wrappers not on fused hot path) | R_qrtc=1.4706 / R_total=1.4731; maa_ratio=1.0 (no duplicate propagation)
+IMPLEMENTATION_CONTRACT_STATUS PARTIAL_SHARED_BACKBONE_QRTC_IN_MESSAGE_PASSING
+OPTIMIZATION_ELIGIBLE YES_SEMANTICS_PRESERVING_CANDIDATES_LISTED_NOT_IMPLEMENTED
+RETURN_DIR <REDACTED_SERVER_PATH>
+
+==== SEAL 2026-09-08T14:40:00Z (no GPU) ====
+FINAL_STATUS PASS__QRTC_RUNTIME_ROOT_CAUSE__ALGORITHM_DOMINANT
+ROOT_CAUSE_FORWARD ALGORITHM_DOMINANT_WITH_OPTIMIZABLE_ON_PATH_OVERHEAD
+CLAIM_PACKAGE_AUDIT PASS__NO_HARD_PROPAGATION_FIXED_CLAIM_FOUND
+SUBMITTED_TEX_AUDIT PENDING
+QRTC_RUNTIME_OPTIMIZATION_V1 AUTHORIZED__NOT_STARTED
+HEADROOM_V1 NOT_AUTHORIZED
+PAIR_KG UNTOUCHED

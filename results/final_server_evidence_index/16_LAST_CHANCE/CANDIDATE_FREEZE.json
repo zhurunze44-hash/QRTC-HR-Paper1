@@ -1,0 +1,11 @@
+{
+  "N_constant": true,
+  "design_delta_mrr_mean": -0.010520068313048952,
+  "design_delta_mrr_unscaled_diagnostic": -0.007843413115314526,
+  "formula": null,
+  "selection_reasons": [
+    "N_static_across_traced_forwards",
+    "correct_ga_scaled_hurts_design_mrr__not_repair_direction"
+  ],
+  "status": "NOT_SELECTED"
+}

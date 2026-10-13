@@ -1,0 +1,41 @@
+# PC_KEGG withBRG RotatE epoch30 — full valid only (cap-free eval_valid_only.py).
+# Based on pc_kegg_rotate_withbrg_formal_seed1024_epoch30_20260510.yaml — eval only; do not set EVAL_VALID_CAP / EVAL_TEST_CAP.
+
+output_dir: paper1_q2_sci_package_20260428/baseline_rotate_20260510/pc_kegg_withbrg_rotate_epoch30_fullvalid_eval_20260510
+
+# Absolute path: eval_valid_only.py chdirs to a fresh working_dir; relative ckpt would break.
+checkpoint: /root/autodl-tmp/BioPathNet_fresh/paper1_q2_sci_package_20260428/baseline_rotate_20260510/pc_kegg_withbrg_rotate_formal_seed1024_epoch30/KnowledgeGraphCompletionBiomed/biomedical/RotatE/2026-05-10-16-49-07-646100/model_epoch_30.pth
+
+dataset:
+  class: biomedical
+  path: /root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602
+  include_factgraph: yes
+  fact_as_train: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: RotatE
+    embedding_dim: 128
+    max_score: 6
+  criterion: bce
+  num_negative: 512
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+
+optimizer:
+  class: Adam
+  lr: 2.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 4096
+
+train:
+  num_epoch: 30
+  smoke_skip_valid: yes
+
+metric: mrr

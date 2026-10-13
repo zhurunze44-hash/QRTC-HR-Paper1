@@ -1,0 +1,35 @@
+output_dir: <REDACTED_SERVER_PATH>
+
+dataset:
+  class: biomedical
+  path: <REDACTED_SERVER_PATH>
+  include_factgraph: yes
+
+task:
+  class: KnowledgeGraphCompletionBiomed
+  model:
+    class: DistMult
+    embedding_dim: 128
+  criterion: bce
+  num_negative: 64
+  strict_negative: yes
+  heterogeneous_negative: yes
+  heterogeneous_evaluation: yes
+  adversarial_temperature: 1
+  sample_weight: yes
+  full_batch_eval: no
+
+optimizer:
+  class: Adam
+  lr: 2.0e-4
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 512
+
+train:
+  num_epoch: 1
+  batch_per_epoch: 1
+  smoke_skip_valid: yes
+
+metric: mrr

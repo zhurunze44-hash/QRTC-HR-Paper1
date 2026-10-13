@@ -1,0 +1,37 @@
+{
+  "schema": "A1_EXECUTION_CHAIN_ERRATUM_V1",
+  "utc": "2026-09-25T03:16:00Z",
+  "frozen": true,
+  "A1_AUTHORIZED": true,
+  "A1_STATUS": "RUNNING__EXECUTION_CHAIN_HARDENED",
+  "A1_SCIENTIFIC_CONTRACT_CHANGED": false,
+  "A1_EXECUTION_HARNESS_CHANGED": true,
+  "CURRENT_CELL": "BASE_seed1024",
+  "CURRENT_CELL_ADMISSIBILITY": "PENDING_TERMINAL_LINEAGE_RECEIPT",
+  "ORIGINAL_TRAIN_PID": 641335,
+  "TRAIN_PROCESS_EXIT_CODE_POLICY": "UNAVAILABLE__ORPHANED_AFTER_ORCHESTRATOR_TERMINATION",
+  "authorized_method_launchers": {
+    "a1_launch_BASE.sh": "500a220b937564e691c16a1699d07edb2dbff6179fd702863b566a4cd8563965",
+    "a1_launch_GATE_ONLY.sh": "b45d10cd53dedc4b830088c38f8d8ee7e59f7a8003d1c97896f69c331a2474f0",
+    "a1_launch_RAW_QRTC.sh": "d9857317207278b8daccaddf11729562ca20e0eec9ca69622d418fd59d0fcf1d"
+  },
+  "hardened_harness": {
+    "run_a1_cell.sh": "50be8e49d5f4519edc5ff639c7d128b294ad650f946f5f7fb98ddc75686b7ff8",
+    "run_a1_panel_oneshot.sh": "3c47de2c2d32e245a20cbefd3869b16c60e57a6846e9e180836ea7979e645f99",
+    "watch_train_then_resume_panel.sh": "1294003e7e6c2488317a84a458b1e3e32b4fcfc88a46eb4788ba6484422c8009",
+    "a1_eval_full_test_metrics_only.py": "d336b56230a7bc918d2d42a166fb4b27202e91fa643848d387d99a56e76cb037",
+    "extract_a1_metrics.py": "bc1b1c30081d81360d851564420123e7ac73b99405da6d9450882cf47a16bdf8",
+    "seal_base1024_orphan_lineage.sh": "9d12eb75fdd65f3139712f89eb05189e3a1641c3983ff2dd4044f495ebca0c3c"
+  },
+  "interpretation_freeze": {
+    "A1": "QRTC_METHOD_PANEL",
+    "A3": "ORTHOGONAL_FEEDBACK_STATE_VALIDITY",
+    "A1_FEEDBACK_STATE_MODE_ENV": "NONCONTROLLING_IN_SOURCE_RESTORE",
+    "MEMORY_ALPHA": "BOUND_BUT_NONCONTROLLING_ON_FORMAL_FUSED_PATH",
+    "GATE_ONLY_PROSE": "Gate + learned initialization, without cross-layer memory update"
+  },
+  "A2_AUTHORIZED": false,
+  "A3_AUTHORIZED": false,
+  "NO_INTERIM_SCIENTIFIC_INTERPRETATION": true,
+  "A1_EXECUTION_ERRATUM": "authority/A1_EXECUTION_CHAIN_ERRATUM_V1.md"
+}

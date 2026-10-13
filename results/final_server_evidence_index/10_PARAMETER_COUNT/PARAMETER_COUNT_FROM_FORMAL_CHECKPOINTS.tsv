@@ -1,0 +1,9 @@
+checkpoint	total_params	backbone_params	qrtc_module_params	abs_increase_vs_paired_base	rel_increase_vs_paired_base	notes
+PC_wBRG_Base	343911	332291	11620			BioPathNet_clean Base (QRTC_ENABLE=0)
+PC_wBRG_QRTC	343911	332291	11620	0	0.000000	QRTC formal fused (USE_MEMORY=1 TOPK=2)
+PC_wBRG_memory_off_gated_init	343911	332291	11620	0	0.000000	memory-off gated/init variant (gate + qrtc_init_memory; NOT pure gate-only)
+Lnc_wBRG_Base	330725	319105	11620			BioPathNet_clean Base (QRTC_ENABLE=0)
+Lnc_wBRG_QRTC	330725	319105	11620	0	0.000000	QRTC formal fused (USE_MEMORY=1 TOPK=2)
+Lnc_woBRG_Base	238423	226803	11620			BioPathNet_clean Base (QRTC_ENABLE=0)
+Lnc_woBRG_QRTC	238423	226803	11620	0	0.000000	QRTC formal fused (USE_MEMORY=1 TOPK=2)
+PC_woBRG_Base_May08	172493	160873	11620			BioPathNet_clean Base (QRTC_ENABLE=0); archetype for woBRG Clean size; May-02 QRTC live ckpt NOT_ON_DISK

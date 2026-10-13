@@ -1,0 +1,40 @@
+{
+  "schema": "A1_DATA_IDENTITY_FREEZE",
+  "frozen_utc": "20260924T052553Z",
+  "dataset": "PC_KEGG_0602",
+  "setting": "wBRG",
+  "include_factgraph": true,
+  "local_binding_path": "<REDACTED_SERVER_PATH>",
+  "historical_paths_observed": [
+    "<REDACTED_SERVER_PATH>",
+    "/root/autodl-tmp/BioPathNet_fresh/data/PC_KEGG_0602"
+  ],
+  "counts_from_formal_logs": {
+    "entities": 31410,
+    "relations": 14,
+    "triplets": 1916513,
+    "train": 22702,
+    "valid": 3227,
+    "test": 6438,
+    "note": "train count is train2-supervised split as logged by formal runs; train1.txt is factgraph edges"
+  },
+  "files": [
+    {
+      "file": "train1.txt",
+      "sha256": "7eada252e712da7788f02a546e66dfa9ce3fb6f60be29af493de5b561f0d02e3"
+    },
+    {
+      "file": "train2.txt",
+      "sha256": "f6d20ef0e055091bf16e02451b3423bb9f6c6a51a6c1413d6b2bf3174548153f"
+    },
+    {
+      "file": "valid.txt",
+      "sha256": "41e111bc36fe68fa14b6d39a51b63b9cb17ab9998e607921a892ae01bf115259"
+    },
+    {
+      "file": "test.txt",
+      "sha256": "d002b54d454ee0344c53ec712079e7b93bc612f31409fa68b659ff47d6c11f48"
+    }
+  ],
+  "a1_requirement": "Before any A1 run, re-hash these four files at the configured dataset.path; must match exactly. Do not substitute alternate PC_KEGG builds."
+}

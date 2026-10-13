@@ -1,0 +1,38 @@
+{
+  "schema": "A1_SOURCE_IDENTITY_FREEZE",
+  "frozen_utc": "20260924T052553Z",
+  "a1_code_authority_root": "<REDACTED_SERVER_PATH>",
+  "patch_identity": "QRTC_MINIMAL_PATCH_V6",
+  "not_authority": [
+    "<REDACTED_SERVER_PATH>",
+    "<REDACTED_SERVER_PATH>"
+  ],
+  "notes": {
+    "WORK_biopathnet": "OPT-1/2 engineering copy; forbidden as A1 train/eval code root",
+    "A0_worktree": "Contains A0 diagnostic instrumentation; forbidden as A1 code root even if flags off. A1 must use SOURCE_RESTORE authority hashes."
+  },
+  "files": [
+    {
+      "file": "model.py",
+      "sha256": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281"
+    },
+    {
+      "file": "layer.py",
+      "sha256": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657"
+    },
+    {
+      "file": "qrtc_common.py",
+      "sha256": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f"
+    },
+    {
+      "file": "task.py",
+      "sha256": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc"
+    },
+    {
+      "file": "util.py",
+      "sha256": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7"
+    }
+  ],
+  "preflight_live_rehash_match": true,
+  "canonical_source_modified_allowed": false
+}

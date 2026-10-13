@@ -1,0 +1,4727 @@
+[
+  {
+    "checkpoint": "Lnc_wBRG_Base_s1024.pth",
+    "sha256": "a29b0a0647fb8f4b5f3429fcdbf49dedbdec083fbc0a1c7ef5467dcec7707590",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        26,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        832
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        832
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        832
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        832
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        832
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        832
+      ],
+      "model.query.weight": [
+        26,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        26,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        26
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 330725,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "Lnc_wBRG_QRTC_s1024.pth",
+    "sha256": "8609cdc353964e6a59a0b696e7d136676873fcdeb97a51efa386f7fe3134829f",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        26,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        832
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        832
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        832
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        832
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        832
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        832,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        832
+      ],
+      "model.query.weight": [
+        26,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        26,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        26
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 330725,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "Lnc_woBRG_Base_s1024.pth",
+    "sha256": "dca714e5938731d1c17f93531bc45317c2b3543db96fb4a3a8d46bd1c608a2a2",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        12,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        384
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        384
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        384
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        384
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        384
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        384
+      ],
+      "model.query.weight": [
+        12,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        12,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        12
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 238423,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "Lnc_woBRG_QRTC_s1024.pth",
+    "sha256": "714882d6bbc61a9fd985760d52ee73eeb1f7ce82106462ccfd707b3ff5aa2440",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        12,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        384
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        384
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        384
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        384
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        384
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        384,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        384
+      ],
+      "model.query.weight": [
+        12,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        12,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        12
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 238423,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "PC_wBRG_Base_s1024.pth",
+    "sha256": "8a66e860f4740e9e21628c3449d006452d6386c686d3d6a227c163c99fb45b68",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        28,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        896
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        896
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        896
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        896
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        896
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        896
+      ],
+      "model.query.weight": [
+        28,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        28,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        28
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 343911,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "PC_wBRG_QRTC_s1024.pth",
+    "sha256": "e3fb9d65319bf3969337d193dad092cd7a3e1c6592d40887a014244f72dc30c0",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        28,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        896
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        896
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        896
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        896
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        896
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        896
+      ],
+      "model.query.weight": [
+        28,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        28,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        28
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 343911,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "PC_wBRG_gated_init_s1024.pth",
+    "sha256": "90ba86fc6aa63153dfd58e16698937450285251d1a6ce3f659e4a119780c6cd1",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        28,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        896
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        896
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        896
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        896
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        896
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        896,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        896
+      ],
+      "model.query.weight": [
+        28,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        28,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        28
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 343911,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "PC_woBRG_Base_May08_NOT_MAY02.pth",
+    "sha256": "828e411b315d75f4e10048c26d1c244aefc5620bcf0d28b7624607f1a95938d1",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        2,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        64
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        64
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        64
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        64
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        64
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        64
+      ],
+      "model.query.weight": [
+        2,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        2,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        2
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 172493,
+    "qrtc_named_elements": 7459
+  },
+  {
+    "checkpoint": "PC_woBRG_QRTC_May08_BAD_RERUN.pth",
+    "sha256": "36b13903a91b984c9184d60ddd87b40dc8c4e7bb0ef9bc395e9838f7a9354680",
+    "top_level_keys": [
+      "model",
+      "optimizer"
+    ],
+    "state_dict_key_count": 115,
+    "parameter_tensor_names": [
+      "model.m1_shared_hop_logits",
+      "model.unified_lambda",
+      "model.f8_direct_logits",
+      "model.f8_inst_delta_logits",
+      "model.soft_path_prior",
+      "model.qrtc_init_memory",
+      "model.epb_policy_bank",
+      "model.family_ctx_proto_sep_ema",
+      "model.family_ctx_cand_sep_ema",
+      "model.layers.0.layer_norm.weight",
+      "model.layers.0.layer_norm.bias",
+      "model.layers.0.linear.weight",
+      "model.layers.0.linear.bias",
+      "model.layers.0.relation_linear.weight",
+      "model.layers.0.relation_linear.bias",
+      "model.layers.1.layer_norm.weight",
+      "model.layers.1.layer_norm.bias",
+      "model.layers.1.linear.weight",
+      "model.layers.1.linear.bias",
+      "model.layers.1.relation_linear.weight",
+      "model.layers.1.relation_linear.bias",
+      "model.layers.2.layer_norm.weight",
+      "model.layers.2.layer_norm.bias",
+      "model.layers.2.linear.weight",
+      "model.layers.2.linear.bias",
+      "model.layers.2.relation_linear.weight",
+      "model.layers.2.relation_linear.bias",
+      "model.layers.3.layer_norm.weight",
+      "model.layers.3.layer_norm.bias",
+      "model.layers.3.linear.weight",
+      "model.layers.3.linear.bias",
+      "model.layers.3.relation_linear.weight",
+      "model.layers.3.relation_linear.bias",
+      "model.layers.4.layer_norm.weight",
+      "model.layers.4.layer_norm.bias",
+      "model.layers.4.linear.weight",
+      "model.layers.4.linear.bias",
+      "model.layers.4.relation_linear.weight",
+      "model.layers.4.relation_linear.bias",
+      "model.layers.5.layer_norm.weight",
+      "model.layers.5.layer_norm.bias",
+      "model.layers.5.linear.weight",
+      "model.layers.5.linear.bias",
+      "model.layers.5.relation_linear.weight",
+      "model.layers.5.relation_linear.bias",
+      "model.query.weight",
+      "model.m1_hop_logits.weight",
+      "model.m1_hop_logits.bias",
+      "model.hopfilm_mlp.0.weight",
+      "model.hopfilm_mlp.0.bias",
+      "model.hopfilm_gamma.weight",
+      "model.hopfilm_gamma.bias",
+      "model.hopfilm_beta.weight",
+      "model.hopfilm_beta.bias",
+      "model.epb_router.0.weight",
+      "model.epb_router.0.bias",
+      "model.epb_router.2.weight",
+      "model.epb_router.2.bias",
+      "model.qces_rel_logit.weight",
+      "model.qces_rel_logit.bias",
+      "model.epb_residual_mlp.0.weight",
+      "model.epb_residual_mlp.0.bias",
+      "model.epb_residual_mlp.2.weight",
+      "model.epb_residual_mlp.2.bias",
+      "model.cpacc_gate_mlp.0.weight",
+      "model.cpacc_gate_mlp.0.bias",
+      "model.cpacc_gate_mlp.2.weight",
+      "model.cpacc_gate_mlp.2.bias",
+      "model.f8_inst_gate.weight",
+      "model.f8_inst_gate.bias",
+      "model.f8_score_res.weight",
+      "model.f8_score_res.bias",
+      "model.family_ctx_family_emb.weight",
+      "model.family_ctx_hop_gate.weight",
+      "model.family_ctx_hop_gate.bias",
+      "model.family_ctx_proto_mlp.0.weight",
+      "model.family_ctx_proto_mlp.0.bias",
+      "model.family_ctx_proto_mlp.2.weight",
+      "model.family_ctx_proto_mlp.2.bias",
+      "model.family_ctx_film.0.weight",
+      "model.family_ctx_film.0.bias",
+      "model.family_ctx_film.2.weight",
+      "model.family_ctx_film.2.bias",
+      "model.srp_query_gate.0.weight",
+      "model.srp_query_gate.0.bias",
+      "model.srp_query_gate.2.weight",
+      "model.srp_query_gate.2.bias",
+      "model.srp_router.0.weight",
+      "model.srp_router.0.bias",
+      "model.srp_router.1.weight",
+      "model.srp_router.1.bias",
+      "model.srp_router.2.weight",
+      "model.srp_router.2.bias",
+      "model.srp_router.3.weight",
+      "model.srp_router.3.bias",
+      "model.srp_router.4.weight",
+      "model.srp_router.4.bias",
+      "model.srp_router.5.weight",
+      "model.srp_router.5.bias",
+      "model.mlp.layers.0.weight",
+      "model.mlp.layers.0.bias",
+      "model.mlp.layers.1.weight",
+      "model.mlp.layers.1.bias",
+      "model.qrtc_precedent_mlp.0.weight",
+      "model.qrtc_precedent_mlp.0.bias",
+      "model.qrtc_precedent_mlp.2.weight",
+      "model.qrtc_precedent_mlp.2.bias",
+      "model.qrtc_gate_mlp.0.weight",
+      "model.qrtc_gate_mlp.0.bias",
+      "model.qrtc_gate_mlp.2.weight",
+      "model.qrtc_gate_mlp.2.bias",
+      "model.qrtc_usage_mlp.0.weight",
+      "model.qrtc_usage_mlp.0.bias",
+      "model.qrtc_usage_mlp.2.weight",
+      "model.qrtc_usage_mlp.2.bias"
+    ],
+    "tensor_shapes": {
+      "model.m1_shared_hop_logits": [
+        6
+      ],
+      "model.unified_lambda": [
+        1
+      ],
+      "model.f8_direct_logits": [
+        6
+      ],
+      "model.f8_inst_delta_logits": [
+        6
+      ],
+      "model.soft_path_prior": [
+        2,
+        6,
+        32
+      ],
+      "model.qrtc_init_memory": [
+        32
+      ],
+      "model.epb_policy_bank": [
+        4,
+        6
+      ],
+      "model.family_ctx_proto_sep_ema": [],
+      "model.family_ctx_cand_sep_ema": [],
+      "model.layers.0.layer_norm.weight": [
+        32
+      ],
+      "model.layers.0.layer_norm.bias": [
+        32
+      ],
+      "model.layers.0.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.0.linear.bias": [
+        32
+      ],
+      "model.layers.0.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.0.relation_linear.bias": [
+        64
+      ],
+      "model.layers.1.layer_norm.weight": [
+        32
+      ],
+      "model.layers.1.layer_norm.bias": [
+        32
+      ],
+      "model.layers.1.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.1.linear.bias": [
+        32
+      ],
+      "model.layers.1.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.1.relation_linear.bias": [
+        64
+      ],
+      "model.layers.2.layer_norm.weight": [
+        32
+      ],
+      "model.layers.2.layer_norm.bias": [
+        32
+      ],
+      "model.layers.2.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.2.linear.bias": [
+        32
+      ],
+      "model.layers.2.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.2.relation_linear.bias": [
+        64
+      ],
+      "model.layers.3.layer_norm.weight": [
+        32
+      ],
+      "model.layers.3.layer_norm.bias": [
+        32
+      ],
+      "model.layers.3.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.3.linear.bias": [
+        32
+      ],
+      "model.layers.3.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.3.relation_linear.bias": [
+        64
+      ],
+      "model.layers.4.layer_norm.weight": [
+        32
+      ],
+      "model.layers.4.layer_norm.bias": [
+        32
+      ],
+      "model.layers.4.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.4.linear.bias": [
+        32
+      ],
+      "model.layers.4.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.4.relation_linear.bias": [
+        64
+      ],
+      "model.layers.5.layer_norm.weight": [
+        32
+      ],
+      "model.layers.5.layer_norm.bias": [
+        32
+      ],
+      "model.layers.5.linear.weight": [
+        32,
+        416
+      ],
+      "model.layers.5.linear.bias": [
+        32
+      ],
+      "model.layers.5.relation_linear.weight": [
+        64,
+        32
+      ],
+      "model.layers.5.relation_linear.bias": [
+        64
+      ],
+      "model.query.weight": [
+        2,
+        32
+      ],
+      "model.m1_hop_logits.weight": [
+        6,
+        32
+      ],
+      "model.m1_hop_logits.bias": [
+        6
+      ],
+      "model.hopfilm_mlp.0.weight": [
+        64,
+        6
+      ],
+      "model.hopfilm_mlp.0.bias": [
+        64
+      ],
+      "model.hopfilm_gamma.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_gamma.bias": [
+        192
+      ],
+      "model.hopfilm_beta.weight": [
+        192,
+        64
+      ],
+      "model.hopfilm_beta.bias": [
+        192
+      ],
+      "model.epb_router.0.weight": [
+        32,
+        32
+      ],
+      "model.epb_router.0.bias": [
+        32
+      ],
+      "model.epb_router.2.weight": [
+        4,
+        32
+      ],
+      "model.epb_router.2.bias": [
+        4
+      ],
+      "model.qces_rel_logit.weight": [
+        2,
+        32
+      ],
+      "model.qces_rel_logit.bias": [
+        2
+      ],
+      "model.epb_residual_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.epb_residual_mlp.0.bias": [
+        32
+      ],
+      "model.epb_residual_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.epb_residual_mlp.2.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.0.weight": [
+        32,
+        128
+      ],
+      "model.cpacc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.cpacc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.cpacc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.f8_inst_gate.weight": [
+        1,
+        6
+      ],
+      "model.f8_inst_gate.bias": [
+        1
+      ],
+      "model.f8_score_res.weight": [
+        1,
+        64
+      ],
+      "model.f8_score_res.bias": [
+        1
+      ],
+      "model.family_ctx_family_emb.weight": [
+        4,
+        32
+      ],
+      "model.family_ctx_hop_gate.weight": [
+        1,
+        128
+      ],
+      "model.family_ctx_hop_gate.bias": [
+        1
+      ],
+      "model.family_ctx_proto_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.family_ctx_proto_mlp.0.bias": [
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.weight": [
+        32,
+        32
+      ],
+      "model.family_ctx_proto_mlp.2.bias": [
+        32
+      ],
+      "model.family_ctx_film.0.weight": [
+        32,
+        160
+      ],
+      "model.family_ctx_film.0.bias": [
+        32
+      ],
+      "model.family_ctx_film.2.weight": [
+        64,
+        32
+      ],
+      "model.family_ctx_film.2.bias": [
+        64
+      ],
+      "model.srp_query_gate.0.weight": [
+        32,
+        32
+      ],
+      "model.srp_query_gate.0.bias": [
+        32
+      ],
+      "model.srp_query_gate.2.weight": [
+        6,
+        32
+      ],
+      "model.srp_query_gate.2.bias": [
+        6
+      ],
+      "model.srp_router.0.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.0.bias": [
+        96
+      ],
+      "model.srp_router.1.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.1.bias": [
+        96
+      ],
+      "model.srp_router.2.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.2.bias": [
+        96
+      ],
+      "model.srp_router.3.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.3.bias": [
+        96
+      ],
+      "model.srp_router.4.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.4.bias": [
+        96
+      ],
+      "model.srp_router.5.weight": [
+        96,
+        32
+      ],
+      "model.srp_router.5.bias": [
+        96
+      ],
+      "model.mlp.layers.0.weight": [
+        64,
+        64
+      ],
+      "model.mlp.layers.0.bias": [
+        64
+      ],
+      "model.mlp.layers.1.weight": [
+        1,
+        64
+      ],
+      "model.mlp.layers.1.bias": [
+        1
+      ],
+      "model.qrtc_precedent_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_precedent_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_precedent_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_gate_mlp.0.weight": [
+        32,
+        96
+      ],
+      "model.qrtc_gate_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_gate_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_gate_mlp.2.bias": [
+        1
+      ],
+      "model.qrtc_usage_mlp.0.weight": [
+        32,
+        65
+      ],
+      "model.qrtc_usage_mlp.0.bias": [
+        32
+      ],
+      "model.qrtc_usage_mlp.2.weight": [
+        1,
+        32
+      ],
+      "model.qrtc_usage_mlp.2.bias": [
+        1
+      ]
+    },
+    "dtype_summary": {
+      "torch.float32": 115
+    },
+    "total_tensor_elements": 172493,
+    "qrtc_named_elements": 7459
+  }
+]

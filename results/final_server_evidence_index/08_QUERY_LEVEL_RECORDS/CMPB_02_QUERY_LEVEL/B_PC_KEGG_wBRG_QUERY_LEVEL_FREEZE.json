@@ -1,0 +1,23 @@
+{
+  "block": "B_PC_KEGG_wBRG",
+  "n_pairs": 12876,
+  "rank_win": 3627,
+  "rank_tie": 5945,
+  "rank_loss": 3304,
+  "NOTE_PRIOR_SWAP_CORRECTION": "Earlier interrupt note listed Win/Tie/Loss=3627/3304/5945; correct order is Win/Tie/Loss=3627/5945/3304 (tie and loss were swapped).",
+  "frac_win": 0.2816868592730662,
+  "frac_tie": 0.4617117117117117,
+  "frac_loss": 0.2566014290152221,
+  "delta_mrr_observed": 0.013720497337287687,
+  "mean_positive_dRR": 0.18682901931454446,
+  "sum_positive_dRR": 677.6288530538527,
+  "n_positive": 3627,
+  "mean_negative_dRR": -0.15162340476360062,
+  "sum_negative_dRR": -500.96372933893645,
+  "n_negative": 3304,
+  "bootstrap_delta_mrr": 0.01372049733728764,
+  "bootstrap_ci_low": 0.00994854962481225,
+  "bootstrap_ci_high": 0.017421487854436344,
+  "interpretation_LOCKED": "asymmetric short-list redistribution; NOT majority-query improvement; NOT most-queries-improve",
+  "bootstrap_scope": "95% percentile CI for test-query sampling uncertainty conditional on frozen checkpoints; not training-seed uncertainty."
+}

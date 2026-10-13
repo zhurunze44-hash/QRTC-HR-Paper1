@@ -1,0 +1,117 @@
+import torch
+from torch import nn
+
+
+class RelationGuidedEvidenceRouter(nn.Module):
+    """
+    Minimal M1:
+      - hop experts: each hop hidden is one expert
+      - type-compatibility expert: query-conditioned type gate over last-hop hidden
+      - meta fusion: route between hop_mix and type_mix
+      - residual blend with last-hop hidden for warm-start stability
+    """
+
+    def __init__(
+        self,
+        query_dim,
+        hop_dims,
+        expert_dim,
+        type_vocab_cap=64,
+        router_hidden_dim=64,
+        router_temperature=1.0,
+        residual_init=-2.0,
+    ):
+        super().__init__()
+        self.num_hop = len(hop_dims)
+        self.expert_dim = expert_dim
+        self.router_temperature = float(router_temperature)
+        self.type_vocab_cap = int(type_vocab_cap)
+
+        self.hop_projs = nn.ModuleList([
+            nn.Identity() if d == expert_dim else nn.Linear(d, expert_dim)
+            for d in hop_dims
+        ])
+        self.last_proj = (
+            nn.Identity() if hop_dims[-1] == expert_dim else nn.Linear(hop_dims[-1], expert_dim)
+        )
+
+        self.hop_router = nn.Sequential(
+            nn.Linear(query_dim, router_hidden_dim),
+            nn.ReLU(),
+            nn.Linear(router_hidden_dim, self.num_hop),
+        )
+
+        self.type_emb = nn.Embedding(self.type_vocab_cap, expert_dim)
+        self.type_query_proj = nn.Linear(query_dim, expert_dim)
+        self.type_gate = nn.Sequential(
+            nn.Linear(expert_dim * 3, router_hidden_dim),
+            nn.ReLU(),
+            nn.Linear(router_hidden_dim, expert_dim),
+        )
+
+        self.meta_router = nn.Sequential(
+            nn.Linear(query_dim, router_hidden_dim),
+            nn.ReLU(),
+            nn.Linear(router_hidden_dim, 2),
+        )
+
+        self.out_norm = nn.LayerNorm(expert_dim)
+        self.residual_logit = nn.Parameter(torch.tensor(float(residual_init)))
+
+    def _safe_node_type(self, node_type):
+        return node_type.clamp(min=0, max=self.type_vocab_cap - 1)
+
+    def forward(self, hiddens, query, node_type, collect_debug=False):
+        """
+        hiddens: list of [num_nodes, batch_size, d_l]
+        query:   [batch_size, query_dim]
+        node_type: [num_nodes]
+        """
+        assert len(hiddens) == self.num_hop, (len(hiddens), self.num_hop)
+
+        hop_stack = torch.stack(
+            [proj(h) for proj, h in zip(self.hop_projs, hiddens)],
+            dim=0,
+        )  # [L, N, B, D]
+
+        hop_logits = self.hop_router(query) / self.router_temperature
+        hop_weight = torch.softmax(hop_logits, dim=-1)  # [B, L]
+
+        hop_mix = (
+            hop_stack * hop_weight.t().unsqueeze(1).unsqueeze(-1)
+        ).sum(dim=0)  # [N, B, D]
+
+        base_last = self.last_proj(hiddens[-1])  # [N, B, D]
+
+        safe_type = self._safe_node_type(node_type)
+        type_feat = self.type_emb(safe_type).unsqueeze(1).expand(
+            -1, query.size(0), -1
+        )  # [N, B, D]
+        q_feat = self.type_query_proj(query).unsqueeze(0).expand_as(type_feat)
+
+        type_gate = torch.sigmoid(
+            self.type_gate(torch.cat([base_last, type_feat, q_feat], dim=-1))
+        )  # [N, B, D]
+        type_mix = base_last * type_gate
+
+        meta_logits = self.meta_router(query) / self.router_temperature
+        meta_weight = torch.softmax(meta_logits, dim=-1)  # [B, 2]
+
+        fused = (
+            meta_weight[:, 0].unsqueeze(0).unsqueeze(-1) * hop_mix
+            + meta_weight[:, 1].unsqueeze(0).unsqueeze(-1) * type_mix
+        )  # [N, B, D]
+
+        residual_alpha = torch.sigmoid(self.residual_logit)
+        out = self.out_norm((1.0 - residual_alpha) * base_last + residual_alpha * fused)
+
+        debug = {
+            "hop_weight": hop_weight.detach(),
+            "meta_weight": meta_weight.detach(),
+            "residual_alpha": residual_alpha.detach(),
+            "type_gate_mean": type_gate.mean(dim=(0, 2)).detach(),
+        }
+        if collect_debug:
+            debug["node_type_score"] = type_gate.mean(dim=-1).detach()
+
+        return out, debug

@@ -1,0 +1,16 @@
+{
+  "method": "RAW_QRTC",
+  "seed": 1025,
+  "checkpoint": "<REDACTED_SERVER_PATH>",
+  "train_log": "<REDACTED_SERVER_PATH>",
+  "eval_log": "<REDACTED_SERVER_PATH>",
+  "metrics": {
+    "mrr": 0.5458364486694336,
+    "hits@1": 0.45363467931747437,
+    "hits@10": 0.7233613133430481,
+    "mr": 117.96086120605469,
+    "ap": 0.9888975024223328,
+    "auroc": 0.988122820854187
+  },
+  "metrics_source": "<REDACTED_SERVER_PATH>"
+}

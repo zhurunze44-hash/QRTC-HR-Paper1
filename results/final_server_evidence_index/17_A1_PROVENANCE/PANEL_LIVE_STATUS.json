@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-02T08:55:00Z",
+  "A1_AUTHORIZED": true,
+  "A1_STATUS": "PAUSED__RAW1024_LINEAGE_ADJUDICATED__HARNESS_V2",
+  "phase": "LINEAGE_ADJUDICATION_CLOSED",
+  "current_cell": null,
+  "cells_completed": 6,
+  "cells_total": 15,
+  "receipts_done": 6,
+  "RAW_QRTC_seed1024": "ADMISSIBLE__FRESH_COMPLETED_LINEAGE",
+  "RAW_QRTC_seed1024_interim_before_knife": "HOLD__EXECUTION_CONTAMINATION_REQUIRES_LINEAGE_ADJUDICATION",
+  "BASE_seed1026": "INTERRUPTED__HOST_REBOOT",
+  "resume_training": "not_authorized_until_operator_explicitly_restarts_panel",
+  "gpu_actions_this_audit": "none",
+  "erratum": "authority/A1_EXECUTION_CHAIN_ERRATUM_V2.md",
+  "forensics": [
+    "forensics/RAW1024_FORENSIC_AUDIT.md",
+    "forensics/RAW1024_LINEAGE_ADMISSIBILITY.json",
+    "forensics/DESIGN_LINE_INDEPENDENT_REAUDIT_20261002.md"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "seal_utc": "2026-10-02T09:35:00Z",
+  "gpu_touched": false,
+  "training_started": false,
+  "files_modified_outside_forensics": false,
+
+  "A1_ORIGINAL_PANEL": "HOLD__PROVENANCE_AND_PRE_POST_PATCH_COMPARABILITY_UNRESOLVED",
+  "A1_RESUME_AUTHORIZED": false,
+  "A2": "NOT_AUTHORIZED",
+  "A3": "NOT_AUTHORIZED",
+  "GENERIC_KG": "NOT_AUTHORIZED",
+  "GPU": "DO_NOT_TOUCH",
+
+  "RAW1024_NUMERICAL_RESULT": "ESTABLISHED__MRR_0.1946338713169098",
+  "RAW1024_FRESH_LINEAGE": "ESTABLISHED",
+  "RAW1024_WITHIN_RUN_LATE_TRAINING_DIVERGENCE": "ESTABLISHED",
+  "RAW1024_CONTRACT_ADMISSIBILITY": "HOLD__RUNTIME_SOURCE_IMPORT_PROVENANCE_REQUIRES_FINAL_BINDING",
+
+  "withdrawn_premature_label": "ADMISSIBLE__WITH_OPERATIONAL_INCIDENTS_NOT_AFFECTING_SCIENCE",
+
+  "gates": {
+    "gate1_runtime_import": {
+      "status": "PARTIALLY_BOUND__TRACEBACK_SOURCE_RESTORE_NO_WORKTREE_BUT_NOT_FULL_MODULE_FILE_RECEIPT",
+      "evidence": "forensics/GATE1_RUNTIME_IMPORT_PROVENANCE_EVIDENCE.json",
+      "summary": "Exception stacks for OOM/resume cells resolve only to QRTC_HR_SOURCE_RESTORE_20260908 biopathnet/* + run.py; zero WORK/worktree paths; freeze SHA matches live; source mtimes May-2026. BASE1024 almost no stack. No module.__file__ receipt on quiet success. append-not-scrub + historical PYTHONPATH NOT_PROVEN."
+    },
+    "gate2_harness_science_equivalence": {
+      "status": "UNRESOLVED",
+      "summary": "Operational patches dominate; sys.path scrub is science-affecting-if-contaminated; historical harness bytes not recoverable."
+    },
+    "gate3_base1026": {
+      "status": "POLICY_FRESH_RESTART_IF_PANEL_CONTINUES",
+      "checkpoint_keys": ["model", "optimizer"],
+      "missing": ["scheduler", "scaler", "rng", "dataloader_state"],
+      "recommended_if_original_A1_continues": "preserve INTERRUPTED__HOST_REBOOT lineage; fresh restart seed1026 from epoch0; not outcome-driven"
+    }
+  },
+
+  "endgames": {
+    "A_rescue_original": "GO__A1_PANEL_CAN_CONTINUE_UNDER_CURRENT_FROZEN_CONTRACT only after Gate1 FULLY closed + Gate2 science-equivalent",
+    "B_cannot_rescue": "STOP__A1_ORIGINAL_PANEL_PROVENANCE_INSUFFICIENT; A1-R/V2 would be post-hoc, not confirmatory A1"
+  }
+}

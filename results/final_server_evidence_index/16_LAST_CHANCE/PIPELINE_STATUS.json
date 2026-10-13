@@ -1,0 +1,89 @@
+{
+  "backward": 0,
+  "canonical_source_modified": false,
+  "closeout_note": "G3 skipped (NOT_SELECTED); scientific re-run complete after R1-R10 repairs",
+  "cost": {
+    "forwards_batches": 0,
+    "gpu_peak_mib": 8758.35205078125,
+    "runs": [
+      {
+        "label": "g0_raw1:LNC:RAW:noop",
+        "peak_mib": 2407.55810546875,
+        "wall_sec": 31.67552947998047
+      },
+      {
+        "label": "g0_raw2:LNC:RAW:noop",
+        "peak_mib": 2432.17578125,
+        "wall_sec": 0.9787471294403076
+      },
+      {
+        "label": "g0_raw1:PC:RAW:noop",
+        "peak_mib": 2763.31103515625,
+        "wall_sec": 3.0373027324676514
+      },
+      {
+        "label": "g0_raw2:PC:RAW:noop",
+        "peak_mib": 2809.65478515625,
+        "wall_sec": 1.867551326751709
+      },
+      {
+        "label": "g1_noop:LNC:RAW:noop",
+        "peak_mib": 4718.08349609375,
+        "wall_sec": 3.962442636489868
+      },
+      {
+        "label": "g1_zero_update:LNC:RAW:zero_update",
+        "peak_mib": 4718.08349609375,
+        "wall_sec": 3.4322967529296875
+      },
+      {
+        "label": "g1_identity_control:LNC:RAW:identity_control",
+        "peak_mib": 4718.08349609375,
+        "wall_sec": 3.453692674636841
+      },
+      {
+        "label": "g1_noop:PC:RAW:noop",
+        "peak_mib": 2726.48681640625,
+        "wall_sec": 6.6395838260650635
+      },
+      {
+        "label": "g1_zero_update:PC:RAW:zero_update",
+        "peak_mib": 2726.78369140625,
+        "wall_sec": 5.509948492050171
+      },
+      {
+        "label": "g1_identity_control:PC:RAW:identity_control",
+        "peak_mib": 2726.78369140625,
+        "wall_sec": 5.4385106563568115
+      },
+      {
+        "label": "g2_raw:LNC:RAW:noop",
+        "peak_mib": 4718.31201171875,
+        "wall_sec": 3.9708425998687744
+      },
+      {
+        "label": "g2_trace:LNC:RAW:trace_only",
+        "peak_mib": 8758.35205078125,
+        "wall_sec": 4.221612215042114
+      },
+      {
+        "label": "g2_probe_ga:LNC:RAW:correct_ga",
+        "peak_mib": 8758.35205078125,
+        "wall_sec": 4.310983180999756
+      },
+      {
+        "label": "g2_probe_ga_unscaled:LNC:RAW:correct_ga_unscaled",
+        "peak_mib": 8758.35205078125,
+        "wall_sec": 4.348366975784302
+      }
+    ],
+    "wall_sec": 82.84741067886353
+  },
+  "diagnostic_overlay_modified": true,
+  "ended_utc": "2026-10-03T03:46:36Z",
+  "new_training_runs": 0,
+  "optimizer_step": 0,
+  "runtime_status": "NO_INVESTMENT_SIGNAL",
+  "started_utc": "2026-10-03T03:45:12Z",
+  "test_used_for_selection": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "A1_EVALUATOR_IDENTITY_FREEZE",
+  "frozen_utc": "20260924T052553Z",
+  "primary_train_entrypoint": {
+    "path": "<REDACTED_SERVER_PATH>",
+    "sha256": "5f945607d93b25af96f4cdd463b9aa524eb371a1ff60eb238695049151ef6ebb",
+    "role": "formal train launcher (epoch-8 checkpoint production)"
+  },
+  "full_test_metrics_evaluator": {
+    "path": "<REDACTED_SERVER_PATH>",
+    "sha256": "368bc63bfe6f4c9eea753453ef354a80868e5e370775c5da1064e6a50ce44a2d",
+    "role": "Table-binding full-test metrics-only evaluator used for PC KEGG wBRG QRTC formal test numbers"
+  },
+  "full_valid_evaluator_available": {
+    "path": "<REDACTED_SERVER_PATH>",
+    "sha256": "431bc9e581e6ddddbda9c0a8e01a5e73eb8c9bace0492fde3c1aacc884fbe340",
+    "role": "valid-only helper; A1 primary endpoint remains TEST metrics from metrics-only evaluator after epoch-8"
+  },
+  "ranking_contract": {
+    "filtered_ranking": true,
+    "heterogeneous_evaluation": true,
+    "full_batch_eval": false,
+    "endpoint_split": "test",
+    "n_test": 6438
+  },
+  "forbidden": [
+    "switching evaluator after seeing outcomes",
+    "using capped/truecap valid-only numbers as A1 primary",
+    "TEST-based epoch selection"
+  ]
+}

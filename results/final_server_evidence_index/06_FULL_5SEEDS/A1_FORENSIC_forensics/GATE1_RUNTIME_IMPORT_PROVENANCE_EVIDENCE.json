@@ -1,0 +1,189 @@
+{
+  "utc": "2026-10-02T09:31:56Z",
+  "verdict": "PARTIALLY_BOUND__TRACEBACK_SOURCE_RESTORE_NO_WORKTREE_BUT_NOT_FULL_MODULE_FILE_RECEIPT",
+  "freeze_vs_live_source_sha": [
+    {
+      "file": "model.py",
+      "freeze": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+      "live": "2cb1e5765a271ae5ed9e02cd7216828ccdcfe27b84a3a1f3cc926d2774c6b281",
+      "match": true,
+      "mtime": "2026-05-06T12:44:32"
+    },
+    {
+      "file": "layer.py",
+      "freeze": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657",
+      "live": "20def12fd0c7f9fbb3f2af17a208c8dda399d4801b25fc1df6b7c5cd9000e657",
+      "match": true,
+      "mtime": "2026-05-05T16:12:24"
+    },
+    {
+      "file": "qrtc_common.py",
+      "freeze": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f",
+      "live": "1b28b333ccd50d86d55f9b68517d4266bfee17313947a0a4e25a020a3b35530f",
+      "match": true,
+      "mtime": "2026-05-05T16:12:17"
+    },
+    {
+      "file": "task.py",
+      "freeze": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc",
+      "live": "7b5ef96afac9e01662f4478860471cddf8b6fe328adc5102fe3543d0576ae9dc",
+      "match": true,
+      "mtime": "2026-04-27T14:31:59"
+    },
+    {
+      "file": "util.py",
+      "freeze": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7",
+      "live": "93fe3f550dd1adc2d921017a6d5b0ea2c13bf8bc788cabac11ce663796b85fb7",
+      "match": true,
+      "mtime": "2026-05-06T12:31:04"
+    }
+  ],
+  "source_files_mtime_all_before_a1_panel": true,
+  "worktree_or_WORK_paths_in_any_completed_cell_log": 0,
+  "cells_with_traceback_core_modules": {
+    "BASE_seed1024": "WEAK__no_File_traceback_of_biopathnet_stack__only_indirect_or_absent",
+    "GATE_ONLY_seed1024": "STRONG__run_model_layer_task_qrtc_common",
+    "RAW_QRTC_seed1024": "STRONG_on_OOM_attempts__winning_silent_run_inferred_same_launcher_exec",
+    "BASE_seed1025": "STRONG_minus_qrtc_common_not_in_stack",
+    "GATE_ONLY_seed1025": "STRONG",
+    "RAW_QRTC_seed1025": "STRONG",
+    "BASE_seed1026": "STRONG_minus_qrtc_common"
+  },
+  "critical_caveats": [
+    "run.py uses sys.path.append not insert/scrub \u2014 ambient earlier biopathnet would win; historical PYTHONPATH NOT_PROVEN",
+    "Winning silent trains rarely emit module paths; strongest evidence is OOM/exception stacks from sibling attempts under same launcher exec of SOURCE_RESTORE/script/run.py",
+    "No contemporaneous module.__file__ dump in successful train logs",
+    "SOURCE_RESTORE scientific files mtime May-2026 and freeze SHA match live \u2014 files not rewritten during A1 window (FACT)"
+  ],
+  "raw1024_contract_implication": "HOLD__RUNTIME_SOURCE_IMPORT_PROVENANCE_REQUIRES_FINAL_BINDING \u2014 numerical/lineage/divergence established, contract-admissibility not upgraded to ADMISSIBLE",
+  "cell_path_inventory": {
+    "BASE_seed1024": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 1,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [],
+      "has_any_traceback_source": true
+    },
+    "GATE_ONLY_seed1024": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 5,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    },
+    "RAW_QRTC_seed1024": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 5,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    },
+    "BASE_seed1025": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 4,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    },
+    "GATE_ONLY_seed1025": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 5,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    },
+    "RAW_QRTC_seed1025": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 5,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    },
+    "BASE_seed1026": {
+      "source_restore_paths": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "n_source_restore": 4,
+      "worktree_or_alt_paths": [],
+      "n_alt": 0,
+      "other_biopath_related": [
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>",
+        "<REDACTED_SERVER_PATH>"
+      ],
+      "has_any_traceback_source": true
+    }
+  }
+}

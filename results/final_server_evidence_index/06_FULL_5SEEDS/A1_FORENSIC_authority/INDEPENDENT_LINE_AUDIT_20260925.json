@@ -1,0 +1,28 @@
+{
+  "schema": "A1_INDEPENDENT_LINE_AUDIT",
+  "utc": "2026-09-25T03:12:00Z",
+  "verdict": "METHOD_PANEL_COHERENT__EXECUTION_HAD_P0_BUGS_FIXED__DESIGN_HAS_LABELING_THEATER",
+  "p0_fixed": [
+    "EVAL_CHDIR_READONLY_SOURCE_RESTORE",
+    "LIVE_ORCHESTRATOR_SCRIPT_OVERWRITE_HANDOFF"
+  ],
+  "p1_design": [
+    "FEEDBACK_STATE_MODE_UNREAD",
+    "MEMORY_ALPHA_NOOP_ON_FUSED_DISTMULT",
+    "GATE_ONLY_NOT_MATCHED_TOPOLOGY_ABLATION",
+    "A1_IS_NOT_FEEDBACK_STATE_VALIDITY"
+  ],
+  "live": {
+    "base_seed1024_train": "RUNNING_ORPHANED_PPID1",
+    "resume_watcher": "watch_train_then_resume_panel.sh",
+    "eval_fix": "A1_EVAL_LAUNCH_CWD_WRITABLE"
+  },
+  "a1_authorized": true,
+  "a2_authorized": false,
+  "a3_authorized": false,
+  "forbid_mid_panel": [
+    "change_seeds_methods_hparams_stats",
+    "rewrite_SOURCE_RESTORE",
+    "cherry_pick"
+  ]
+}

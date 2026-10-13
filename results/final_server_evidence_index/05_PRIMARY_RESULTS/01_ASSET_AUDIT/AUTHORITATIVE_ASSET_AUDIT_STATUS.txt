@@ -1,0 +1,5 @@
+AUTHORITATIVE_ASSET_AUDIT=PARTIAL
+REASON=Main-table seed1024 scalars reverse-bound; May-02 woBRG live .pth, seeds 1025/1026 formal trees, Top-K formal trees, relation-usage dumps remain gaps.
+NEW_TRAINING_RUNS=0
+OPTIMIZER_STEPS=0
+SCIENTIFIC_SOURCE_MODIFIED=false
